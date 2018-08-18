@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { FooterBarComponent } from './components/footer-bar/footer-bar.component';
 
 const appRoutes: Routes = [
   { path: 'home',     component: HomeComponent },
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     HomeComponent,
     ServicesComponent,
     ContactComponent,
-    GalleryComponent
+    GalleryComponent,
+    FooterBarComponent
   ],
   imports: [
     BrowserModule,
