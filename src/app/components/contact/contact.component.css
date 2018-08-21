@@ -1,3 +1,38 @@
 .section {
   padding: 80px 0 80px 0;
 }
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.contact-info {
+  position: relative;
+}
+
+.contact-info i {
+  position: absolute;
+  top: 44px;
+  left: 35px;
+  height: 24px;
+  width: 24px;
+}
+
+.contact-info .fa-phone {
+  position: absolute;
+  top: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-list {
+  padding: 25px 0;
+}
+
+.info {
+  padding-left: 30px;
+}
