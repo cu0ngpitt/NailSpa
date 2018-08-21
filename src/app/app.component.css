@@ -1,3 +1,7 @@
+:host >>> .breadcrumb > li + li:before {
+  content: ">";
+}
+
 #contact-bar {
   list-style: none;
   margin: 0;
@@ -20,6 +24,7 @@ ul, li {
   margin-left: 30px;
 }
 
-:host >>> .breadcrumb > li + li:before {
-  content: ">";
+.inner {
+  margin: 0 auto;
+  max-width: 1200px;
 }
