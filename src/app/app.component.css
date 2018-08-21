@@ -2,6 +2,10 @@
   content: ">";
 }
 
+:host >>> .section {
+  padding: 115px 0 115px 0;
+}
+
 #contact-bar {
   list-style: none;
   margin: 0;
