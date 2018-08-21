@@ -36,3 +36,13 @@ ul {
 .info {
   padding-left: 30px;
 }
+
+input, textarea {
+  border-radius: 25px;
+  padding: 12px 19px;
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 10px 32px;
+}
