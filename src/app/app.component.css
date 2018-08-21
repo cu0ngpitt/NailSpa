@@ -19,3 +19,7 @@ ul, li {
 #sat, #sun {
   margin-left: 30px;
 }
+
+:host >>> .breadcrumb > li + li:before {
+  content: ">";
+}
