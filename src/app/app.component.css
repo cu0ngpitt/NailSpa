@@ -1,3 +1,8 @@
+:host >>> .section-page-title {
+  background-color: mistyrose;
+}
+/*remove the styles above when done, only used for visual*/
+
 :host >>> .breadcrumb > li + li:before {
   content: ">";
 }
@@ -18,6 +23,10 @@
 :host >>> nav .breadcrumb {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+:host >>> .breadcrumb-section {
+  background-color: #e9ecef;
 }
 
 #contact-bar {
@@ -45,4 +54,11 @@ ul, li {
 .inner {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class="outer"] {
+        display: none;
+    }
 }
