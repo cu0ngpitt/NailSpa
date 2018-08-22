@@ -7,10 +7,6 @@
   max-width: 1200px;
 }
 
-.contact-info {
-  position: relative;
-}
-
 .contact-info i {
   position: absolute;
   top: 44px;
@@ -27,10 +23,15 @@
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .info-list {
   padding: 25px 0;
+}
+
+.info-list:not(:last-child) {
+  border-bottom: 1px solid lightgrey;
 }
 
 .info {
@@ -45,4 +46,26 @@ input, textarea {
 .btn {
   border-radius: 25px;
   padding: 10px 32px;
+  margin-top: 20px;
+}
+
+.divider {
+  border-bottom: 2px solid pink;
+  width: 90px;
+  height: 24px;
+}
+
+.col-lg-8 p, form {
+  margin-top: 30px;
+}
+
+.col-lg-8, .col-lg-4 {
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    [class="section contact"] {
+        padding: 40px 0;
+    }
 }
