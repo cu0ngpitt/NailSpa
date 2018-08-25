@@ -55,7 +55,7 @@ input, textarea {
   height: 24px;
 }
 
-.col-lg-8 p, form {
+.intro, form {
   margin-top: 30px;
 }
 
@@ -63,9 +63,42 @@ input, textarea {
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 768px) {
+.prefContact {
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 812px) {
     /* For mobile phones: */
     [class="section contact"] {
         padding: 40px 0;
     }
+}
+
+/*form validation*/
+.ng-valid[required], .ng-valid.required  {
+  border: 1px solid limegreen;
+}
+
+.ng-touched.ng-invalid:not(form)  {
+  border: 1px solid red;
+}
+
+.isInvalid {
+  color: red;
+  font-size: 11px;
+  position: absolute;
+  right: 20px;
+  bottom: 22px;
+}
+
+.isInvalid-msg {
+  color: red;
+  font-size: 11px;
+  position: absolute;
+  right: 30px;
+  z-index: 2
+}
+
+textarea {
+  z-index: 1;
 }
