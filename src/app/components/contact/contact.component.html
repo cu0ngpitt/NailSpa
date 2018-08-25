@@ -1,44 +1,69 @@
 <section class="section-page-title">
-  <h1 class="page-title">Contact Us</h1>
+  <div class="container">
+    <h1 class="page-title">Contact Us</h1>
+  </div>
 </section>
 
 <section class="section contact">
   <div class="container row">
+<!--contact form column section-->
     <div class="col-lg-8">
       <h2>Contact Us</h2>
 
       <div class="divider"></div>
 
-      <p>Have a question or comment? You may contact us by phone or email.<br>
+      <p class="intro">Have a question or comment? You may contact us by phone or email.<br>
         Or you can also use the contact form below.
       </p>
 
-      <form>
+      <form #contactForm="ngForm">
         <div class="form-row">
           <div class="form-group col-md-6">
-            <input type="text" class="form-control" id="inputFirstName" placeholder="First Name">
+            <input type="text" class="form-control" id="inputFirstName" placeholder="First Name" required ngModel name="first" #first="ngModel">
+            <div [hidden]="first.valid || first.untouched" class="isInvalid">First name is required</div>
           </div>
           <div class="form-group col-md-6">
-            <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
+            <input type="text" class="form-control" id="inputLastName" placeholder="Last Name" required ngModel name="last" #last="ngModel">
+            <div [hidden]="last.valid || last.untouched" class="isInvalid">Last name is required</div>
+          </div>
+        </div>
+
+        <div class="container prefContact ">
+          <p class="">Please select your preferred method of contact:</p>
+
+          <div class="form-row container prefContact">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Phone" [(ngModel)]="prefContact" ngModel name="pref" #pref="ngModel" required>
+              <label class="form-check-label" for="inlineRadio1">Cell Phone</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Email" [(ngModel)]="prefContact" ngModel name="pref" #pref="ngModel" required>
+              <label class="form-check-label" for="inlineRadio2">Email</label>
+            </div>
           </div>
         </div>
 
         <div class="form-row">
-          <div class="form-group col-md-6">
-            <input type="tel" class="form-control" id="inputPhone" placeholder="Phone">
+          <div *ngIf="pref.value === 'Phone'" class="form-group col-md-6">
+            <input type="tel; number" class="form-control" id="inputPhone" placeholder="Phone" required ngModel name="phone" #phone="ngModel">
+            <div [hidden]="phone.valid || phone.untouched" class="isInvalid">Phone number is required</div>
           </div>
-          <div class="form-group col-md-6">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+          <div *ngIf="pref.value === 'Email'" class="form-group col-md-6">
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required ngModel name="email" #email="ngModel">
+            <div [hidden]="email.valid || email.untouched" class="isInvalid">Email is required</div>
           </div>
         </div>
 
         <div class="form-group">
-          <textarea class="form-control" id="inputMessage" rows="5" placeholder="Message"></textarea>
+          <div [hidden]="message.valid || message.untouched" class="isInvalid-msg">A message is required</div>
+          <textarea class="form-control" id="inputMessage" rows="5" placeholder="Message" required ngModel name="message" #message="ngModel"></textarea>
         </div>
-        <button type="submit" class="btn">Send Message</button>
+
+        <button type="submit" class="btn" [disabled]="!contactForm.form.valid" (click)="contactForm.reset()">Send Message</button>
       </form>
     </div>
 
+<!--contact info column section-->
     <div class="col-lg-4">
       <ul class="contact-info fa-ul">
         <li class="info-list">
@@ -80,6 +105,7 @@
         </li>
       </ul>
     </div>
-
   </div>
 </section>
+
+<!--google map section-->
