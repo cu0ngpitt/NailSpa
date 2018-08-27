@@ -8,6 +8,10 @@ h2 {
   margin: 0;
 }
 
+.text p {
+  margin-top: 26px;
+}
+
 /*Why styles section*/
 .intro {
   margin-top: 20px;
@@ -24,9 +28,6 @@ h2 {
   height: 24px;
 }
 
-.services .container p {
-  margin-top: 26px;
-}
 
 .service-box {
   padding: 50px 25px;
