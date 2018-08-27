@@ -15,3 +15,11 @@
 .navbar {
   padding: 8px 0;
 }
+
+.services {
+  padding-right: 0;
+}
+
+.dropdown-toggle {
+  padding-left: 6px;
+}
