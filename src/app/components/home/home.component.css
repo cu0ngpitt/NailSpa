@@ -1,0 +1,50 @@
+h2 {
+  margin: 0;
+}
+/*Why styles section*/
+.why-pic img {
+    width: 570px;    
+}
+
+/*Services styles section*/
+.services {
+  background-color: whitesmoke;
+}
+
+.divider {
+  border-bottom: 2px solid pink;
+  width: 90px;
+  height: 24px;
+}
+
+.services .container p {
+  margin-top: 26px;
+}
+
+.service-box {
+  padding: 50px 25px;
+}
+
+.icon-box, .icon-body {
+  padding: 0 20px;
+}
+
+.icon-box {
+  width: 145px;
+}
+
+.icon-pic img {
+  width: 80px;
+  height: 80px;
+}
+
+.nails::before, .pedi::before {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  content: '';
+  height: 1px;
+  width: 85%;
+  background: black;
+  transform: translateX(-50%);
+}
