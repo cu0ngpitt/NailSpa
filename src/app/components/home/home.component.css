@@ -1,9 +1,16 @@
+/*remove this section later, just testing*/
+.carousel-item .d-block {
+  max-height: 646px;
+}
+/*remove above section*/
+
 h2 {
   margin: 0;
 }
+
 /*Why styles section*/
-.why-pic img {
-    width: 570px;    
+.intro {
+  margin-top: 20px;
 }
 
 /*Services styles section*/
