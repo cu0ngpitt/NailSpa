@@ -35,6 +35,20 @@
   margin-top: 20px;
 }
 
+:host >>> .divider {
+  border-bottom: 2px solid pink;
+  width: 90px;
+  height: 24px;
+}
+
+:host >>> h2 {
+  margin: 0;
+}
+
+:host >>> .intro {
+  margin: 30px auto 0;
+}
+
 #contact-bar {
   list-style: none;
   margin: 0;
