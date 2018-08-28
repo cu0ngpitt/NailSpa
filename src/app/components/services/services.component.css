@@ -1,0 +1,39 @@
+.services {
+  background-color: whitesmoke;
+}
+
+.icon-pic img {
+  width: 80px;
+  height: 80px;
+}
+
+.nails, .pedi {
+  border-bottom: .5px solid black;
+}
+
+.nails, .mani {
+  border-right: .5px solid black;
+}
+
+.content {
+  margin-top: 60px;
+}
+
+article {
+  padding: 40px 32px;
+}
+
+article:hover {
+  background: white;
+}
+
+@media only screen and (max-width: 812px) {
+    /* For mobile phones: */
+    article {
+        padding: 20px;
+    }
+
+    .nails, .pedi, .mani {
+      border: none;
+    }
+}
