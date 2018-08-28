@@ -43,12 +43,6 @@ input, textarea {
   padding: 12px 19px;
 }
 
-.divider {
-  border-bottom: 2px solid pink;
-  width: 90px;
-  height: 24px;
-}
-
 .intro, form {
   margin-top: 30px;
 }
