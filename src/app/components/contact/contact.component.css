@@ -63,7 +63,7 @@ input, textarea {
 
 @media only screen and (max-width: 812px) {
     /* For mobile phones: */
-    [class="section contact"] {
+    .contact {
         padding: 40px 0;
     }
 }
