@@ -1,0 +1,24 @@
+.outer {
+  background-color: white;
+}
+
+.inner {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+}
+
+.links {
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 812px) {
+    /* For mobile phones: */
+    .navbar-brand, .nav {
+        margin: 0 auto;
+    }
+}
