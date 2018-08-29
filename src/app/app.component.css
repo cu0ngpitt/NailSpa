@@ -35,7 +35,7 @@
   margin-top: 20px;
 }
 
-:host >>> .divider {
+:host >>> .divider-lg {
   border-bottom: 2px solid pink;
   width: 90px;
   height: 24px;
@@ -47,6 +47,10 @@
 
 :host >>> .intro {
   margin: 30px auto 0;
+}
+
+:host >>> .text p {
+  margin-top: 32px;
 }
 
 #contact-bar {
@@ -78,7 +82,7 @@ ul, li {
 
 @media only screen and (max-width: 812px) {
     /* For mobile phones: */
-    [class="outer"] {
+    .outer {
         display: none;
     }
 }
