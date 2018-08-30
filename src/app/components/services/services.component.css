@@ -1,3 +1,13 @@
+/*Why styles section*/
+.block {
+  max-width: 475px;
+}
+
+.intro {
+  margin-bottom: 17px;
+}
+
+/*Services styles section*/
 .services {
   background-color: whitesmoke;
 }
@@ -5,6 +15,16 @@
 .icon-pic img {
   width: 80px;
   height: 80px;
+}
+
+.icon-title h4 {
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+article p {
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .nails, .pedi {
@@ -39,5 +59,12 @@ article:hover {
 
     .nails, .pedi, .mani {
       border: none;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    /* For mobile phones: */
+    .why-body {
+      margin-bottom: 50px;
     }
 }

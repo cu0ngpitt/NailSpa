@@ -4,13 +4,13 @@
 }
 /*remove above section*/
 
-.text p {
-  margin-top: 26px;
+/*Why styles section*/
+.block {
+  max-width: 475px;
 }
 
-/*Why styles section*/
 .intro {
-  margin-top: 20px;
+  margin-bottom: 17px;
 }
 
 /*Services styles section*/
@@ -18,14 +18,23 @@
   background-color: whitesmoke;
 }
 
-.divider {
-  border-bottom: 2px solid pink;
-  width: 90px;
-  height: 24px;
+.divider::after {
+  content: '';
+  display: inline-block;
+  background-color: pink;
+  width: 60px;
+  height: 3px;
 }
 
+.service-container {
+  margin-top: 35px;
+}
 
 .service-box {
+  padding: 0;
+}
+
+.nails, .pedi, .mani, .wax {
   padding: 50px 25px;
 }
 
@@ -42,6 +51,23 @@
   height: 80px;
 }
 
+.icon-title h4 {
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.nails, .mani {
+  text-align: right;
+}
+
+.pedi, .wax {
+  text-align: left;
+}
+
+.icon-box {
+  text-align: center;
+}
+
 .nails::before, .pedi::before {
   position: absolute;
   left: 50%;
@@ -51,4 +77,51 @@
   width: 85%;
   background: black;
   transform: translateX(-50%);
+}
+
+.nails::after, .mani::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  content: '';
+  width: 1px;
+  height: 75%;
+  background: black;
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 812px) {
+    /* For mobile phones: */
+    .mani::before, .wax:before {
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      content: '';
+      height: 1px;
+      width: 85%;
+      background: black;
+      transform: translateX(-50%);
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    /* For mobile phones: */
+    .icon-box {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .icon-body {
+      padding-top: 25px;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .why-body {
+      margin-bottom: 50px;
+    }
+
+    .nails, .pedi, .mani, .wax {
+      padding: 40px 20px;
+    }
 }
