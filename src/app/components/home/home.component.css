@@ -79,18 +79,21 @@
   transform: translateX(-50%);
 }
 
-.nails::after, .mani::after {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  content: '';
-  width: 1px;
-  height: 75%;
-  background: black;
-  transform: translateY(-50%);
+@media only screen and (min-width: 764px) {
+    /* For resolutions larger than mobile phones: */
+    .nails::after, .mani::after {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      content: '';
+      width: 1px;
+      height: 75%;
+      background: black;
+      transform: translateY(-50%);
+    }
 }
 
-@media only screen and (max-width: 812px) {
+@media only screen and (max-width: 764px) {
     /* For mobile phones: */
     .mani::before, .wax:before {
       position: absolute;
