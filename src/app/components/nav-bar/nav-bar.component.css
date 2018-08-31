@@ -23,3 +23,7 @@
 .dropdown-toggle {
   padding-left: 6px;
 }
+
+.nav-item.nav-link {
+  margin-left: 45px;
+}
