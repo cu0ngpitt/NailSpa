@@ -8,7 +8,7 @@
 }
 
 :host >>> .section {
-  padding: 115px 0;
+  padding: 50px 0;
 }
 
 :host >>> .section-page-title {
@@ -86,13 +86,35 @@ ul, li {
   max-width: 1200px;
 }
 
-@media only screen and (max-width: 812px) {
-    /* For mobile phones: */
+/* For laptops: */
+@media only screen and (min-width: 768px) {
     .outer {
       display: none;
     }
 
-    :host >>>     .section {
-      padding: 50px 0;
+    :host >>>  .section {
+      padding: 85px 0;
+    }
+}
+
+/* For desktops: */
+@media only screen and (min-width: 992px) {
+    .outer {
+      display: none;
+    }
+
+    :host >>>  .section {
+      padding: 100px 0;
+    }
+}
+
+/* For Widescreens: */
+@media only screen and (min-width: 1200px) {
+    .outer {
+      display: none;
+    }
+
+    :host >>>  .section {
+      padding: 115px 0;
     }
 }
