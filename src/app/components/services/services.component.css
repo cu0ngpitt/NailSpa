@@ -41,7 +41,7 @@ a {
 }
 
 .content {
-  margin-top: 60px;
+  margin-top: 35px;
 }
 
 .divider {
@@ -80,8 +80,8 @@ position: relative;
 	opacity: 1;
 }
 
+/* For laptops or smaller: */
 @media only screen and (max-width: 767px) {
-    /* For mobile phones: */
     article {
         padding: 20px;
     }
@@ -91,9 +91,16 @@ position: relative;
     }
 }
 
+/* For desktops: */
 @media only screen and (max-width: 990px) {
-    /* For mobile phones: */
     .why-body {
       margin-bottom: 50px;
     }
+}
+
+/* For widescreens */
+@media only screen and (min-width: 1200px) {
+  .content {
+    margin-top: 60px;
+  }
 }
