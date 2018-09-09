@@ -1,3 +1,151 @@
+h2, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.pedicure, .waxing {
+  background: whitesmoke;
+}
+
+article {
+  padding: 35px 0;
+}
+
+.pricing-title {
+  margin: 0 auto 30px auto;
+  position: relative;
+}
+
+.pricing-title::after {
+  position: absolute;
+  content: '';
+  height: 3px;
+  width: 70%;
+  background: pink;
+  transform: translate(-50%);
+  top: 50%;
+  z-index: 1;
+}
+
+.pricing-heading span {
+  padding-bottom: 6px;
+  border-bottom: 2px solid pink;
+}
+
+.pricing-subtitle {
+  margin-top: 30px;
+  margin-bottom: 35px;
+}
+
+.subtitle-text {
+  margin: 20px auto 0 auto;
+  max-width: 75%;
+}
+
+.pricing-subsction {
+  margin-bottom: 30px;
+}
+
+.pricing-heading {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.item-name {
+  font-size: 22px;
+  text-align: left;
+  justify-self: start;
+  align-self: center;
+}
+
+.pricing-item {
+  column-gap: 10px;
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.pricing-item-single {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 3fr 1fr;
+}
+
+.header {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.kids .header {
+  position: relative;
+  top: 24px;
+}
+
+.pricing-item, .pricing-item-single, .scents {
+  padding: 25px 0;
+}
+
+.price {
+  font-size: 24px;
+  align-self: center;
+}
+
+.heading-desc {
+  font-size: 16px;
+  margin-top: 16px;
+  color: #999999;
+}
+
+.desc {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #999999;
+}
+
 .divider {
-  margin: 0 auto;
+  margin-top: 5px;
+  height: 2px;
+  width: 3rem;
+  background-color: pink;
+}
+
+.nails .pricing-item,
+.nails .pricing-item-single,
+.manicure .pricing-item-single,
+.kids .pricing-item,
+.kids .pricing-item-single {
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.pedicure .pricing-item-single,
+.pedicure .scents,
+.waxing .pricing-item-single {
+  border-bottom: 1px solid #cecece;
+}
+
+/* For Desktops and smaller */
+@media only screen and (max-width: 991px) {
+  .break {
+    display: none;
+  }
+}
+
+/* For Widescreens: */
+@media only screen and (min-width: 1200px) {
+    article {
+      padding: 60px 0;
+    }
+
+    .item-name {
+      font-size: 24px;
+    }
+
+    .price {
+      font-size: 32px;
+      font-weight: 450;
+    }
 }
