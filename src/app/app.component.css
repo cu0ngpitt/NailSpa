@@ -81,17 +81,24 @@ ul, li {
   margin-left: 30px;
 }
 
+.outer {
+  padding: 0 15px; 
+}
+
 .inner {
   margin: 0 auto;
   max-width: 1200px;
 }
 
 /* For laptops: */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 991px) {
     .outer {
       display: none;
     }
+}
 
+/* For laptops: */
+@media only screen and (min-width: 768px) {
     :host >>>  .section {
       padding: 85px 0;
     }
@@ -99,10 +106,6 @@ ul, li {
 
 /* For desktops: */
 @media only screen and (min-width: 992px) {
-    .outer {
-      display: none;
-    }
-
     :host >>>  .section {
       padding: 100px 0;
     }
@@ -110,10 +113,6 @@ ul, li {
 
 /* For Widescreens: */
 @media only screen and (min-width: 1200px) {
-    .outer {
-      display: none;
-    }
-
     :host >>>  .section {
       padding: 115px 0;
     }
