@@ -58,6 +58,9 @@
   margin-top: 32px;
 }
 
+:host >>> a {
+  text-decoration: none;
+}
 
 #contact-bar {
   list-style: none;
@@ -82,7 +85,7 @@ ul, li {
 }
 
 .outer {
-  padding: 0 15px; 
+  padding: 0 15px;
 }
 
 .inner {
