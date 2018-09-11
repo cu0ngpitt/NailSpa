@@ -59,8 +59,12 @@ input, textarea {
   margin-bottom: 16px;
 }
 
+.pref-input {
+  margin: 0;
+}
+
+/* For desktops and smaller: */
 @media only screen and (max-width: 812px) {
-    /* For mobile phones: */
     .contact {
         padding: 40px 0;
     }

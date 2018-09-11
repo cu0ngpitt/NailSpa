@@ -31,7 +31,7 @@
         <div class="container">
           <p class="">Please select your preferred method of contact:</p>
 
-          <div class="form-row container">
+          <div class="form-row container prefContact">
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Phone" ngModel name="pref" #pref="ngModel" required>
               <label class="form-check-label" for="inlineRadio1">Cell Phone</label>
@@ -43,18 +43,18 @@
           </div>
         </div>
 
-        <div class="form-row prefContact">
-          <div *ngIf="pref.value === 'Phone'" class="form-group col-md-6">
-            <input type="tel; number" class="form-control" id="inputPhone" placeholder="Phone" required ngModel name="phone" #phone="ngModel">
+        <div class="form-row align-items-center">
+          <div *ngIf="pref.value === 'Phone'" class="form-group col-md-6 pref-input">
+            <input type="tel; number" class="form-control prefContact" id="inputPhone" placeholder="Phone" required ngModel name="phone" #phone="ngModel">
             <div [hidden]="phone.valid || phone.untouched" class="isInvalid">Phone number is required</div>
           </div>
-          <div *ngIf="pref.value === 'Email'" class="form-group col-md-6">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required ngModel name="email" #email="ngModel">
+          <div *ngIf="pref.value === 'Email'" class="form-group col-md-6 pref-input">
+            <input type="email" class="form-control prefContact" id="inputEmail" placeholder="Email" required ngModel name="email" #email="ngModel">
             <div [hidden]="email.valid || email.untouched" class="isInvalid">Email is required</div>
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="form-group message">
           <div [hidden]="message.valid || message.untouched" class="isInvalid-msg">A message is required</div>
           <textarea class="form-control" id="inputMessage" rows="5" placeholder="Message" required ngModel name="message" #message="ngModel"></textarea>
         </div>
