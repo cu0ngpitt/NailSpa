@@ -43,7 +43,7 @@
           </div>
         </div>
 
-        <div class="form-row">
+        <div class="form-row prefContact">
           <div *ngIf="pref.value === 'Phone'" class="form-group col-md-6">
             <input type="tel; number" class="form-control" id="inputPhone" placeholder="Phone" required ngModel name="phone" #phone="ngModel">
             <div [hidden]="phone.valid || phone.untouched" class="isInvalid">Phone number is required</div>
