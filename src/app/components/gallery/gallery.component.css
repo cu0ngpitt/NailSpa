@@ -1,0 +1,13 @@
+.gallery {
+  text-align: center;
+}
+
+.gallery h1 {
+  margin-bottom: 30px;
+}
+
+.gallery img {
+  margin-bottom: 30px;
+  max-height: 400px;
+  max-width: 400px;
+}
