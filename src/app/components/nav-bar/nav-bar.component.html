@@ -1,25 +1,25 @@
 <div class="outer sticky-top">
   <div class="inner">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar(toggle)">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" routerLink="/home">
         <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
         Nails & Spa
       </a>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <div class="nav">
-          <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active">Home</a>
-          <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active">Services</a>
+      <div class="collapse navbar-collapse justify-content-center show" id="navbarNav">
+        <div class="nav" [style.width]="toggle ? '250px' : '0'">
+          <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar(toggle)">Home</a>
+          <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar(toggle)">Services</a>
             <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+              <a class="nav-link dropdown-toggle" (click)="toggleDropdown(drop)" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <a class="dropdown-item" routerLink="/pricing">Pricing</a>
+                   <a class="dropdown-item" routerLink="/pricing" (click)="toggleNavbar(toggle)">Pricing</a>
                  </div>
              </div>
-          <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
-          <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active">Contact Us</a>
+          <a class="nav-item nav-link" [style.margin-top]="drop ? '32px' : '0'" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar(toggle)">Gallery</a>
+          <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar(toggle)">Contact Us</a>
         </div>
       </div>
     </nav>

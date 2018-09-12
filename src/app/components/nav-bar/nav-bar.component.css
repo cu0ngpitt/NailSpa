@@ -24,6 +24,37 @@
   padding-left: 6px;
 }
 
-.nav-item.nav-link {
+.nav-item {
   margin-left: 45px;
+}
+
+@media only screen and (max-width: 991.5px) {
+  .active {
+    background: pink;
+  }
+
+  .nav {
+    background-color: white;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    transition: all 1s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .nav-link {
+    margin: 0;
+  }
+
+  .dropdown {
+    position: absolute;
+    transform: translate(175px, -40px);
+  }
+
+  .dropdown-menu {
+    transform: translate(-210px, -3px);
+    padding: 0;
+    border: none;
+  }
 }
