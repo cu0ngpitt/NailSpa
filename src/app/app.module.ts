@@ -40,7 +40,8 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     RouterModule.forRoot(
-      appRoutes
+      appRoutes,
+      { scrollPositionRestoration: 'enabled' }
     ),
     FormsModule
   ],
