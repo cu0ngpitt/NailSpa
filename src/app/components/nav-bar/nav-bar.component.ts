@@ -14,7 +14,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
      state('active',   style({
        width: '250px'
      })),
-     transition('inactive <=> active', animate('1000ms ease-in'))
+     transition('inactive <=> active', animate('1000ms'))
    ]),
    trigger('navBar1', [
      state('inactive', style({
@@ -63,12 +63,7 @@ export class NavBarComponent implements OnInit {
   }
 
   toggleNavbar() {
-    if(this.state === 'inactive') {
-      this.state = 'active';
-    } else if(this.state === 'active') {
-      this.state = 'inactive';
-    }
-    //this.state = this.state === 'active' ? 'inactive' :'active';
+    this.state = this.state === 'active' ? 'inactive' :'active';
   }
 
   toggleDropdown() {
