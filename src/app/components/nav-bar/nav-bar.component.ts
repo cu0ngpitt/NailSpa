@@ -19,38 +19,41 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
    ]),
    trigger('navBar1', [
      state('inactive', style({
-       transform: 'rotate(0deg) translate(0, 0)';
-     }))
+       transform: 'rotate(0deg) translate(0px, 0px)'
+     })),
      state('active',   style({
-       transform: 'rotate(-45deg) translate(-6px, 6px)';
-     }))
+       transform: 'rotate(-45deg) translate(-6px, 6px)'
+     })),
      transition('inactive => active', animate('1000ms ease-in')),
      transition('active => inactive', animate('1000ms ease-out'))
    ]),
    trigger('navBar2', [
      state('inactive', style({
-       opacity: 1;
-     }))
+       opacity: 1
+     })),
      state('active',   style({
-       opacity: 0;
-     }))
+       opacity: 0
+     })),
      transition('inactive => active', animate('1000ms ease-in')),
      transition('active => inactive', animate('1000ms ease-out'))
    ]),
    trigger('navBar3', [
      state('inactive', style({
-       transform: 'rotate(0deg) translate(0, 0)';
-     }))
+       transform: 'rotate(0deg) translate(0, 0)'
+     })),
      state('active',   style({
-       transform: 'rotate(45deg) translate(-6px, -7px)';
-     }))
+       transform: 'rotate(45deg) translate(-6px, -7px)'
+     })),
      transition('inactive => active', animate('1000ms ease-in')),
      transition('active => inactive', animate('1000ms ease-out'))
    ])
  ]
 })
 export class NavBarComponent implements OnInit {
-  @Input() navbarState, navBar1, navBar2, navBar3;
+  @Input() navbarState;
+  @Input() navBar1;
+  @Input() navBar2;
+  @Input() navBar3;
 
   state = 'inactive';
   dropdownState = 'inactive';
