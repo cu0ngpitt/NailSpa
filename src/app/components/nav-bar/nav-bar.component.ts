@@ -6,7 +6,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
-  animations: [
+  /*animations: [
    trigger('navbarState', [
      state('inactive', style({
        width: 0
@@ -14,8 +14,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
      state('active',   style({
        width: 250
      })),
-     transition('inactive => active', animate('1000ms ease-in')),
-     transition('active => inactive', animate('1000ms ease-out'))
+     transition('inactive <=> active', animate('1000ms ease-in'))  
    ]),
    trigger('navBar1', [
      state('inactive', style({
@@ -48,6 +47,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
      transition('active => inactive', animate('1000ms ease-out'))
    ])
  ]
+ */
 })
 export class NavBarComponent implements OnInit {
   @Input() navbarState;

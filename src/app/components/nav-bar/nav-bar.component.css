@@ -52,6 +52,7 @@
 
   .nav.sidebar {
     background-color: white;
+    position: fixed;
     width: 250px;
     height: 100vh;
     display: block;
