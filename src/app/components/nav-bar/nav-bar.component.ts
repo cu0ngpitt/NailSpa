@@ -9,7 +9,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   animations: [
    trigger('navbarState', [
      state('inactive', style({
-       width: 0
+       width: '0px'
      })),
      state('active',   style({
        width: '250px'
@@ -63,7 +63,12 @@ export class NavBarComponent implements OnInit {
   }
 
   toggleNavbar() {
-    this.state = this.state === 'active' ? 'inactive' :'active';
+    if(this.state === 'inactive') {
+      this.state = 'active';
+    } else if(this.state === 'active') {
+      this.state = 'inactive';
+    }
+    //this.state = this.state === 'active' ? 'inactive' :'active';
   }
 
   toggleDropdown() {
