@@ -12,7 +12,7 @@
         <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
         Nails & Spa
       </a>
-      <div class="collapse navbar-collapse justify-content-center show" id="navbarNav">
+
         <!-- Regular navbar, shows on screens over 992px -->
         <div class="nav">
           <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
@@ -27,7 +27,8 @@
           <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
         </div>
 
-        <!-- Sidebar nav, shows under 992px screens -->
+      <!-- Sidebar nav, shows under 992px screens -->
+      <div class="collapse navbar-collapse justify-content-center show" id="navbarNav">
         <div class="nav sidebar" [@navbarState]="state">
           <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
           <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
