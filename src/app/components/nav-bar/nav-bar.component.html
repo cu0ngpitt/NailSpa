@@ -1,25 +1,44 @@
 <div class="outer sticky-top">
   <div class="inner">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" (click)="toggleNavbar(toggle)">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+        <div class="menu-icon">
+          <div class="bar1" [@navBar1]="state"></div>
+          <div class="bar2" [@navBar2]="state"></div>
+          <div class="bar3" [@navBar3]="state"></div>
+        </div>
       </button>
       <a class="navbar-brand" routerLink="/home">
         <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
         Nails & Spa
       </a>
       <div class="collapse navbar-collapse justify-content-center show" id="navbarNav">
-        <div class="nav" [style.width]="toggle ? '250px' : '0'">
-          <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar(toggle)">Home</a>
-          <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar(toggle)">Services</a>
+        <!-- Regular navbar, shows on screens over 992px -->
+        <div class="nav">
+          <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
+          <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
+            <div class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" (click)="toggleDropdown()" ></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" routerLink="/pricing" (click)="toggleNavbar()">Pricing</a>
+                 </div>
+             </div>
+          <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
+          <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
+        </div>
+
+        <!-- Sidebar nav, shows under 992px screens -->
+        <div class="nav sidebar" [@navbarState]="state">
+          <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
+          <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" (click)="toggleDropdown(drop)" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <a class="dropdown-item" routerLink="/pricing" (click)="toggleNavbar(toggle)">Pricing</a>
+                   <a class="dropdown-item" routerLink="/pricing" (click)="toggleNavbar()">Pricing</a>
                  </div>
              </div>
-          <a class="nav-item nav-link" [style.margin-top]="drop ? '32px' : '0'" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar(toggle)">Gallery</a>
-          <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar(toggle)">Contact Us</a>
+          <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
+          <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
         </div>
       </div>
     </nav>
