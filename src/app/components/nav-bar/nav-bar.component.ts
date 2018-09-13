@@ -1,32 +1,70 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
+
 
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrls: ['./nav-bar.component.css'],
+  animations: [
+   trigger('navbarState', [
+     state('inactive', style({
+       width: 0
+     })),
+     state('active',   style({
+       width: 250
+     })),
+     transition('inactive => active', animate('1000ms ease-in')),
+     transition('active => inactive', animate('1000ms ease-out'))
+   ]),
+   trigger('navBar1', [
+     state('inactive', style({
+       transform: 'rotate(0deg) translate(0, 0)';
+     }))
+     state('active',   style({
+       transform: 'rotate(-45deg) translate(-6px, 6px)';
+     }))
+     transition('inactive => active', animate('1000ms ease-in')),
+     transition('active => inactive', animate('1000ms ease-out'))
+   ]),
+   trigger('navBar2', [
+     state('inactive', style({
+       opacity: 1;
+     }))
+     state('active',   style({
+       opacity: 0;
+     }))
+     transition('inactive => active', animate('1000ms ease-in')),
+     transition('active => inactive', animate('1000ms ease-out'))
+   ]),
+   trigger('navBar3', [
+     state('inactive', style({
+       transform: 'rotate(0deg) translate(0, 0)';
+     }))
+     state('active',   style({
+       transform: 'rotate(45deg) translate(-6px, -7px)';
+     }))
+     transition('inactive => active', animate('1000ms ease-in')),
+     transition('active => inactive', animate('1000ms ease-out'))
+   ])
+ ]
 })
 export class NavBarComponent implements OnInit {
-  toggle = false;
-  drop = false;
+  @Input() navbarState, navBar1, navBar2, navBar3;
+
+  state = 'inactive';
+  dropdownState = 'inactive';
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggleNavbar(toggle) {
-    if (toggle === false) {
-      this.toggle = true;
-    } else if (toggle === true) {
-      this.toggle = false;
-    }
+  toggleNavbar() {
+    this.state = this.state === 'active' ? 'inactive' :'active';
   }
 
-  toggleDropdown(drop) {
-    if (drop === false) {
-      this.drop = true;
-    } else if (drop === true) {
-      this.drop= false;
-    }
+  toggleDropdown() {
+    this.dropdownState = this.dropdownState === 'active' ? 'inactive' :'active';
   }
 }
