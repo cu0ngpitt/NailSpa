@@ -12,6 +12,15 @@
   height: 30px;
 }
 
+.bar1, .bar2, .bar3 {
+  width: 28px;
+  height: 3px;
+  border-radius: 20px;
+  background-color: #808080;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
 .navbar {
   padding: 8px 0;
 }
@@ -24,8 +33,12 @@
   padding-left: 6px;
 }
 
-.nav-item {
+.nav-link.nav-item {
   margin-left: 45px;
+}
+
+.nav.sidebar {
+  display: none;
 }
 
 @media only screen and (max-width: 991.5px) {
@@ -34,7 +47,12 @@
   }
 
   .nav {
+    display: none;
+  }
+
+  .nav.sidebar {
     background-color: white;
+    width: 250px;
     height: 100vh;
     display: block;
     position: absolute;
@@ -43,17 +61,18 @@
     white-space: nowrap;
   }
 
-  .nav-link {
+  .nav-item.nav-link {
     margin: 0;
+    border: 1px solid red;
   }
 
-  .dropdown {
+  .sidebar .dropdown {
     position: absolute;
-    transform: translate(175px, -40px);
+    transform: translate(210px, -41px);
   }
 
-  .dropdown-menu {
-    transform: translate(-210px, -3px);
+  .sidebar .dropdown-menu {
+    transform: translate(-205px, 0px);
     padding: 0;
     border: none;
   }
