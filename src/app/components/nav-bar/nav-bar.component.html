@@ -32,8 +32,8 @@
         </div>
 
         <!-- Sidebar nav, shows under 992px screens -->
-      <div class="navbar-collapse" id="navbarNav">
-        <div class="nav sidebar" [@navbarState]="state">
+      <div class="navbar-collapse">
+        <div class="nav sidebar" id="navbarNav" [@navbarState]="state">
           <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
           <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
             <div class="nav-item dropdown">

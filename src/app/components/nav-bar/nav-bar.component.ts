@@ -6,7 +6,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css'],
-  animations: [
+  /*animations: [
    trigger('navbarState', [
      state('inactive', style({
        width: '0px'
@@ -46,7 +46,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
      transition('inactive => active', animate('1000ms ease-in')),
      transition('active => inactive', animate('1000ms ease-out'))
    ])
- ]
+ ]*/
 })
 export class NavBarComponent implements OnInit {
   @Input() navbarState;
@@ -63,7 +63,14 @@ export class NavBarComponent implements OnInit {
   }
 
   toggleNavbar() {
-    this.state = this.state === 'active' ? 'inactive' :'active';
+    //this.state = this.state === 'active' ? 'inactive' :'active';
+    if (this.state === 'inactive') {
+      document.getElementById('navbarNav').style.width = '250px';
+      this.state = 'active';
+    } else if (this.state === 'active') {
+      document.getElementById('navbarNav').style.width = '0';
+      this.state = 'inactive';
+    }
   }
 
   toggleDropdown() {
