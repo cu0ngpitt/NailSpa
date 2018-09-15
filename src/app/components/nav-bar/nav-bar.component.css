@@ -50,6 +50,7 @@
     display: none;
   }
 
+/* Sliding sidebar animation */
   .nav.sidebar {
     background-color: white;
     position: fixed;
@@ -65,6 +66,47 @@
   .nav-item.nav-link {
     margin: 0;
     border: 1px solid red;
+  }
+
+/* Button animation */
+  .menu-icon.open {
+    transform: rotate(180deg);
+    transition: all 1s;
+  }
+
+  .menu-icon.closed {
+    transform: rotate(0);
+    transition: all 1s;
+  }
+
+  .bar1.open {
+    transform: rotate(-45deg) translate(-6px, 6px);
+    transition: all 1s;
+  }
+
+  .bar1.closed {
+    transform: rotate(0) translate(0, 0);
+    transition: all 1s;
+  }
+
+  .bar2.open {
+    opacity: 0;
+    transition: all 1s;
+  }
+
+  .bar2.closed {
+    opacity: 1;
+    transition: all 1s;
+  }
+
+  .bar3.open {
+     transform: rotate(45deg) translate(-6px, -7px);
+     transition: all 1s;
+  }
+
+  .bar3.closed {
+     transform: rotate(0) translate(0, 0);
+     transition: all 1s;
   }
 
   .sidebar .dropdown {
