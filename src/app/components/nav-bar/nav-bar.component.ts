@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+//import { trigger, state, style, animate, transition } from '@angular/animations';
 
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -49,28 +50,23 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
  ]*/
 })
 export class NavBarComponent implements OnInit {
-  @Input() navbarState;
-  @Input() navBar1;
-  @Input() navBar2;
-  @Input() navBar3;
 
-  state = 'inactive';
+  button = false;
+
   dropdownState = 'inactive';
 
-  constructor() { }
+  constructor(private sidebar: SidebarService) { }
 
   ngOnInit() {
   }
 
   toggleNavbar() {
-    //this.state = this.state === 'active' ? 'inactive' :'active';
-    if (this.state === 'inactive') {
-      document.getElementById('navbarNav').style.width = '250px';
-      this.state = 'active';
-    } else if (this.state === 'active') {
-      document.getElementById('navbarNav').style.width = '0';
-      this.state = 'inactive';
+    if(this.button === false) {
+      this.button = true;
+    } else if(this.button === true) {
+      this.button = false;
     }
+    this.sidebar.toggleNavbar();
   }
 
   toggleDropdown() {
