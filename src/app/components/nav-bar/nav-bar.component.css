@@ -1,6 +1,6 @@
 .outer {
   background-color: white;
-  position: fixed;
+  position: sticky;
   width: 100%;
 }
 
@@ -12,6 +12,10 @@
 #logo {
   width: 30px;
   height: 30px;
+}
+
+.nav {
+  margin: 0 auto;
 }
 
 .bar1, .bar2, .bar3 {
@@ -67,7 +71,6 @@
 
   .nav-item.nav-link {
     margin: 0;
-    border: 1px solid red;
   }
 
 /* Button animation */
@@ -111,14 +114,39 @@
      transition: all 1s;
   }
 
-  .sidebar .dropdown {
+  /* Dropdown menu for sidebar */
+  .sidebar .dropdown-toggle {
     position: absolute;
-    transform: translate(210px, -41px);
+    transform: translate(210px);
   }
 
-  .sidebar .dropdown-menu {
-    transform: translate(-205px, 0px);
-    padding: 0;
-    border: none;
+  .sidebar .nav-item:hover, .sidebar .dropdown-item:hover {
+    background: pink;
+    transition: all .6s ease-out;
+  }
+
+  .sidebar .nav-item:first-child {
+    margin-top: 22px;
+  }
+
+  .sidebar .nav-item {
+    margin-top: 10px;
+  }
+
+  .sidebar .dropdown-item.closed {
+    height: 0;
+    border: 0;
+    margin-top: 0;
+    padding: 0 24px;
+    overflow-y: hidden;
+    transition: all 1s;
+  }
+
+  .sidebar .dropdown-item.open {
+    height: 40px;
+    margin-top: 10px;
+    border: 0;
+    padding: 8px 32px;
+    transition: all 1s;
   }
 }

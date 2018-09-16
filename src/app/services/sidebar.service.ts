@@ -5,16 +5,25 @@ import { Injectable } from '@angular/core';
 })
 export class SidebarService {
   public state = 'inactive';
+  public dropdownState = 'inactive';
 
   constructor() { }
 
   toggleNavbar() {
     if (this.state === 'inactive') {
-      document.getElementById('navbarNav').style.width = '250px';      
+      document.getElementById('navbarNav').style.width = '250px';
       this.state = 'active';
     } else if (this.state === 'active') {
       document.getElementById('navbarNav').style.width = '0';
       this.state = 'inactive';
+    }
+  }
+
+  toggleDropdown() {
+    if (this.dropdownState === 'inactive') {
+      this.dropdownState = 'active';
+    } else if (this.dropdownState === 'active') {
+      this.dropdownState = 'inactive';
     }
   }
 }
