@@ -46,11 +46,11 @@
         <div class="form-row align-items-center">
           <div *ngIf="pref.value === 'Phone'" class="form-group col-md-6 pref-input">
             <input type="tel; number" class="form-control prefContact" id="inputPhone" placeholder="Phone" required ngModel name="phone" #phone="ngModel">
-            <div [hidden]="phone.valid || phone.untouched" class="isInvalid">Phone number is required</div>
+            <div [hidden]="phone.valid || phone.untouched" class="isInvalid-contact">Phone number is required</div>
           </div>
           <div *ngIf="pref.value === 'Email'" class="form-group col-md-6 pref-input">
             <input type="email" class="form-control prefContact" id="inputEmail" placeholder="Email" required ngModel name="email" #email="ngModel">
-            <div [hidden]="email.valid || email.untouched" class="isInvalid">Email is required</div>
+            <div [hidden]="email.valid || email.untouched" class="isInvalid-contact">Email is required</div>
           </div>
         </div>
 
