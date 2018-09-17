@@ -97,7 +97,7 @@ ul, li {
 @media only screen and (max-width: 991.5px) {
     .outer {
       display: none;
-    }    
+    }
 }
 
 /* For laptops: */
