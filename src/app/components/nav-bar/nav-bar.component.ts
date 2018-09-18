@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router }  from '@angular/router';
 
 
 import { SidebarService } from '../../services/sidebar.service';
@@ -13,7 +14,8 @@ export class NavBarComponent implements OnInit {
   button = false;
   dropdownState = false;
 
-  constructor(private sidebar: SidebarService) { }
+  constructor(private sidebar: SidebarService,
+              public router: Router) { }
 
   ngOnInit() {
   }
@@ -29,7 +31,7 @@ export class NavBarComponent implements OnInit {
   }
 
   dropState() {
-    this.dropdownState = false;    
+    this.dropdownState = false;
   }
 
   toggleDropdown() {
