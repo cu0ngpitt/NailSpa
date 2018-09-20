@@ -1,5 +1,9 @@
 .outer {
   background-color: white;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
   position: sticky;
   width: 100%;
 }
