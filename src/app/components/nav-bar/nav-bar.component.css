@@ -1,7 +1,5 @@
 .outer {
   background-color: white;
-  position: sticky;
-  top: 0px;  
   width: 100%;
 }
 
@@ -21,7 +19,17 @@
   justify-content: space-between;
 }
 
+.navbar-brand.home {
+  display: none;
+}
+
+.box {
+  width: 100%;
+  display: flex;
+}
+
 .nav.navbar {
+  padding: 0;
   margin: 0 auto;
 }
 
@@ -59,8 +67,23 @@
     background: pink;
   }
 
-  .nav {
+  .box {
+    width: auto;
+    display: inline-block;
+  }
+
+  .nav.navbar {
     display: none;
+  }
+
+  .nav.home {
+    display: none;
+  }
+
+  .navbar-brand.home {
+    display: inline-block;
+    margin-right: 16px;
+    margin-left: auto;
   }
 
 /* Sliding sidebar animation */
