@@ -1,5 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
+const scrollPosition = window.pageYOffset;
+
 @Component({
   selector: 'app-pricing',
   templateUrl: './pricing.component.html',
@@ -10,6 +12,13 @@ export class PricingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  scrollTo(link) {
+    let fragment = link;
+    document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    console.log(window.pageYOffset);
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {
@@ -26,10 +35,6 @@ export class PricingComponent implements OnInit {
 
   // When the user clicks on the button, scroll to the top of the document
   topFunction() {
-      /*
-      document.body.scrollTop = 0; // For Safari
-      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      */
-      window.scrollTo({top: 0, behavior: "smooth"});
+    window.scrollTo({top: 0, behavior: "smooth"});
   }
 }
