@@ -43,7 +43,10 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
-      { scrollPositionRestoration: 'enabled' }
+      { scrollPositionRestoration: 'enabled',
+        anchorScrolling: 'enabled',
+        scrollOffset: [0, 50]
+      }
     ),
     FormsModule
   ],
