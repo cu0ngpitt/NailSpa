@@ -45,7 +45,7 @@ const appRoutes: Routes = [
       appRoutes,
       { scrollPositionRestoration: 'enabled',
         anchorScrolling: 'enabled',
-        scrollOffset: [0, 50]
+        scrollOffset: [0, 90]
       }
     ),
     FormsModule
