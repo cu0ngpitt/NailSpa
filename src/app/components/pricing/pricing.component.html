@@ -23,7 +23,29 @@
     </div>
 
     <div class="text">
-      <p>A complete range of services. You can learn more below.</p>
+      <p>A complete range of services. Click the buttons to learn more about each service.</p>
+    </div>
+
+    <div class="pills-box">
+      <div class=" pills">
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item nails">
+            <a class="nav-link" data-toggle="pill" href="#nails" role="tab" aria-controls="pills-home" aria-selected="true" (click)="scrollTo('nails')">Nail Services</a>
+          </li>
+          <li class="nav-item pedi">
+            <a class="nav-link" data-toggle="pill" href="#pedicure" role="tab" aria-controls="pills-profile" aria-selected="false">Pedicures</a>
+          </li>
+          <li class="nav-item mani">
+            <a class="nav-link" data-toggle="pill" href="#manicure" role="tab" aria-controls="pills-contact" aria-selected="false">Manicures</a>
+          </li>
+          <li class="nav-item wax">
+            <a class="nav-link" data-toggle="pill" href="#waxing" role="tab" aria-controls="pills-contact" aria-selected="false">Waxing</a>
+          </li>
+          <li class="nav-item kids">
+            <a class="nav-link" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Just for Kids</a>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <article class="nails" id="nails">
@@ -341,7 +363,7 @@
       </div>
     </article>
 
-    <article class="kids">
+    <article class="kids" id="kids">
       <div class="container">
         <div class="pricing-title">
           <h4><span>Just For Kids</span></h4>

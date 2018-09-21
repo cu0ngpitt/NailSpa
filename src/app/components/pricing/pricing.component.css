@@ -127,7 +127,6 @@ article {
   border-bottom: 1px solid #cecece;
 }
 
-
 .scent-list {
   display: grid;
 }
@@ -136,6 +135,43 @@ article {
   display: inline-block;
   padding-left: 0;
   margin: 0 auto;
+}
+
+/* Pills navigation */
+.pills-box {
+  position: sticky;
+  top: 57px;
+  z-index: 9;
+  background: white;
+  margin-top: 20px;
+}
+
+.pills {
+  max-width: 1140px;
+  display: flex;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.nav-pills {
+  margin: 0 !important;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.pills .nav-link {
+  border-radius: 0;
+  padding: 2px 16px;
+  border: 1px solid lightgrey;
+}
+
+.pills .nav-item:not(:last-child) {
+  margin-right: -1px;
+}
+
+.pills .active {
+  border-color: dodgerblue;
 }
 
 /* Back to top button */
@@ -154,7 +190,7 @@ article {
   background-color: pink;
   color: black;
   cursor: pointer;
-  padding: 15px 8px;
+  padding: 8px 8px 12px 8px;
   border-radius: 8px;
   transform: scale(0);
   transition: .2s;
@@ -171,7 +207,7 @@ article {
   background-color: pink;
   color: black;
   cursor: pointer;
-  padding: 15px 8px;
+  padding: 8px 8px 12px 8px;
   border-radius: 8px;
   transform: scale(1);
   transition: .2s;
@@ -209,5 +245,48 @@ article {
 
   .scent-list li {
     padding-left: 35%;
+  }
+}
+
+/* For nav pills */
+@media only screen and (max-width: 767px) {
+  .container.pills {
+    position: sticky;
+    top: 58px;
+    z-index: 9;
+    background: white;
+  }
+
+  .nav-pills {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .pills .nav-link {
+    padding: 0;
+  }
+
+  .pills .nails {
+    grid-column: 1 / 3;
+  }
+
+  .pills .pedi {
+    grid-column: 3 / 5;
+  }
+
+  .pills .mani {
+    grid-column: 5 / 7;
+  }
+  .pills .wax {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+  .pills .kids {
+    grid-column: 4 / 6;
+    grid-row: 2 / 3;
+  }
+
+  .pills .wax, .pills .kids {
+    margin-top: -1px;
   }
 }
