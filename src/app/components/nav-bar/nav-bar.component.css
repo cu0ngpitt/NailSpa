@@ -1,5 +1,5 @@
 .outer {
-  position: sticky;
+  position: fixed;
   top: 1px;
   background-color: white;
   width: 100%;
