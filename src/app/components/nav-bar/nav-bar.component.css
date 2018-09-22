@@ -1,6 +1,6 @@
 .outer {
   position: sticky;
-  top: 1vh;
+  top: 1px;
   background-color: white;
   width: 100%;
   z-index: 9;
@@ -100,6 +100,7 @@
     transition: all 1s ease-in-out;
     overflow: hidden;
     white-space: nowrap;
+    z-index: 99;
   }
 
   .nav-item.nav-link {
