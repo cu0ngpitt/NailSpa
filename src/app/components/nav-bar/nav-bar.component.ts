@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
 import { Router }  from '@angular/router';
 
 
@@ -11,14 +11,35 @@ import { SidebarService } from '../../services/sidebar.service';
 })
 export class NavBarComponent implements OnInit {
 
-  button = false;
-  dropdownState = false;
+  @ViewChild('stickyNavbar') navbarElement: ElementRef;
+
+  sticky: boolean = false;
+  navbarPosition: any;
+
+  button: boolean = false;
+  dropdownState: boolean = false;
 
   constructor(private sidebar: SidebarService,
               public router: Router) { }
 
   ngOnInit() {
   }
+
+  ngAfterViewInit() {
+    this.navbarPosition = this.navbarElement.nativeElement.offsetTop;
+  }
+
+  @HostListener('window:scroll', ['$event'])
+    handleScroll() {
+      const windowScroll = window.pageYOffset;
+      if(windowScroll >= this.navbarPosition) {
+        this.sticky = true;
+        console.log(windowScroll);
+        console.log(this.navbarPosition);
+      } else {
+        this.sticky = false;
+      }
+    }
 
   toggleNavbar() {
     if(this.button === false) {

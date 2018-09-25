@@ -1,6 +1,9 @@
-.outer {
-  position: sticky;
-  top: 1px;
+.sticky {
+  position: fixed;
+  top: 0;  
+}
+
+ .outer {
   background-color: white;
   width: 100%;
   z-index: 9;
