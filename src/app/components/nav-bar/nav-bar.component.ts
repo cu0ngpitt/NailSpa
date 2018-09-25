@@ -32,7 +32,7 @@ export class NavBarComponent implements OnInit {
   @HostListener('window:scroll', ['$event'])
     handleScroll() {
       const windowScroll = window.pageYOffset;
-      if(windowScroll >= this.navbarPosition) {
+      if(windowScroll > this.navbarPosition) {
         this.sticky = true;
         console.log(windowScroll);
         console.log(this.navbarPosition);
