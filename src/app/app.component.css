@@ -72,9 +72,6 @@ ul, li {
   display: inline-block;
 }
 
-body {
-  overflow: visible;
-}
 #open {
   margin-left: 60px;
 }
