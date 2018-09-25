@@ -1,17 +1,4 @@
-/*Why styles section*/
-.block {
-  max-width: 475px;
-}
-
-.intro {
-  margin-bottom: 17px;
-}
-
 /*Services styles section*/
-.services {
-  background-color: whitesmoke;
-}
-
 .icon-pic img {
   width: 80px;
   height: 80px;
@@ -58,7 +45,7 @@ position: relative;
 .services a::before {
   position: absolute;
   content: '';
-  background: white;
+  background: lightgrey;
   height: 100%;
   width: 100%;
   top: 50%;
@@ -87,13 +74,6 @@ position: relative;
 
     .nails, .pedi, .mani {
       border: none;
-    }
-}
-
-/* For desktops: */
-@media only screen and (max-width: 990px) {
-    .why-body {
-      margin-bottom: 50px;
     }
 }
 
