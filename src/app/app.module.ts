@@ -17,7 +17,7 @@ import { ContactComponent }   from './components/contact/contact.component';
 const appRoutes: Routes = [
   { path: 'home',     component: HomeComponent },
   { path: 'services',  component: ServicesComponent },
-  { path: 'pricing',  component: PricingComponent },
+  { path: 'services/pricing',  component: PricingComponent },
   { path: 'gallery',  component: GalleryComponent },
   { path: 'contact',  component: ContactComponent },
   { path: '',
