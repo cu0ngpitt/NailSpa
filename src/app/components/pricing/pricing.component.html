@@ -30,7 +30,7 @@
       <div class=" pills">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
           <li class="nav-item nails">
-            <a class="nav-link" data-toggle="pill" href="#nails" role="tab" aria-controls="pills-home" aria-selected="true" (click)="scrollTo('nails')">Nail Services</a>
+            <a class="nav-link" data-toggle="pill" href="#nails" role="tab" aria-controls="pills-home" aria-selected="true" (click)="scrollTo('nails')">Nails</a>
           </li>
           <li class="nav-item pedi">
             <a class="nav-link" data-toggle="pill" href="#pedicure" role="tab" aria-controls="pills-profile" aria-selected="false">Pedicures</a>
@@ -42,13 +42,16 @@
             <a class="nav-link" data-toggle="pill" href="#waxing" role="tab" aria-controls="pills-contact" aria-selected="false">Waxing</a>
           </li>
           <li class="nav-item kids">
-            <a class="nav-link" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Just for Kids</a>
+            <a class="nav-link" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Kids</a>
           </li>
         </ul>
       </div>
     </div>
 
-    <article class="nails" id="nails">
+    <div class="service-title">
+      <a id="nails" href="javascript:void(0)" (click)="scrollTo('nails'); this.nails = !this.nails"><h4>Nail Services</h4></a>
+    </div>
+    <article class="nails" [class.open]="nails" [class.accordion]="!nails">
       <div class="container">
         <div class="pricing-title">
           <h4><span>Nail Services</span></h4>
@@ -207,7 +210,10 @@
       </div>
     </article>
 
-    <article class="pedicure" id="pedicure">
+    <div class="service-title">
+      <a id="pedicure" href="javascript:void(0)" (click)="scrollTo('pedicure'); this.pedicure = !this.pedicure"><h4>Pedicures</h4></a>
+    </div>
+    <article class="pedicure" id="pedicure" [class.open]="pedicure" [class.accordion]="!pedicure">
       <div class="container">
         <div class="pricing-title">
           <h4><span>Pedicures</span></h4>
@@ -280,7 +286,11 @@
       </div>
     </article>
 
-    <article class="manicure" id="manicure">
+    <div class="service-title">
+      <a id="manicure" href="javascript:void(0)" (click)="scrollTo('manicure'); this.manicure = !this.manicure">
+      <h4>Manicures</h4></a>
+    </div>
+    <article class="manicure" id="manicure" [class.open]="manicure" [class.accordion]="!manicure">
       <div class="container">
         <div class="pricing-title">
           <h4><span>Manicures</span></h4>
@@ -308,7 +318,11 @@
       </div>
     </article>
 
-    <article class="waxing" id="waxing">
+    <div class="service-title">
+      <a id="waxing" href="javascript:void(0)" (click)="scrollTo('waxing'); this.waxing = !this.waxing">
+      <h4>Waxing</h4></a>
+    </div>
+    <article class="waxing" id="waxing" [class.open]="waxing" [class.accordion]="!waxing">
       <div class="container">
         <div class="pricing-title">
           <h4><span>Waxing</span></h4>
@@ -363,7 +377,11 @@
       </div>
     </article>
 
-    <article class="kids" id="kids">
+    <div class="service-title">
+      <a id="kids" href="javascript:void(0)" (click)="scrollTo('kids'); this.kids = !this.kids">
+      <h4>Just for Kids</h4></a>
+    </div>
+    <article class="kids" id="kids" [class.open]="kids" [class.accordion]="!kids">
       <div class="container">
         <div class="pricing-title">
           <h4><span>Just For Kids</span></h4>

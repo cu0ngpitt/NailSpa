@@ -166,31 +166,56 @@ article {
 }
 
 .pills {
-  max-width: 1140px;
-  display: flex;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .nav-pills {
   margin: 0 !important;
-  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.pills .nav-item {
+  border: 1px solid lightgrey;
+  text-align: center;
 }
 
 .pills .nav-link {
+  height: 100%;
   border-radius: 0;
-  padding: 2px 16px;
-  border: 1px solid lightgrey;
-}
-
-.pills .nav-item:not(:last-child) {
-  margin-right: -1px;
+  padding: 0;
 }
 
 .pills .active {
   border-color: dodgerblue;
+}
+
+/* Accordian */
+article > * {
+  position: relative;
+}
+
+.nails.open,
+.pedicure.open,
+.manicure.open,
+.waxing.open,
+.kids.open {
+  max-height: 3000px;
+  opacity: 1;
+  transition: all 1s;
+  padding: 60px 0;
+}
+
+.accordion .container {
+  padding: 0 15px !important;
+}
+
+.accordion {
+  max-height: 0;
+  opacity: 0;
+  padding: 0px;
+  overflow: hidden;
+  transition: padding 1s, max-height 1s, opacity .1s 1s;
 }
 
 /* Back to top button */

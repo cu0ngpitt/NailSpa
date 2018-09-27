@@ -8,17 +8,40 @@ const scrollPosition = window.pageYOffset;
   styleUrls: ['./pricing.component.css']
 })
 export class PricingComponent implements OnInit {
+  nails: boolean = false;
+  pedicure: boolean = false;
+  manicure: boolean = false;
+  waxing: boolean = false;
+  kids: boolean = false;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-
   scrollTo(link) {
     let fragment = link;
-    document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-    console.log(window.pageYOffset);
+    if(link === 'nails' && this.nails === false) {
+      setTimeout(() => {
+        document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      }, 500);
+    } else if(link === 'pedicure' && this.pedicure === false) {
+      setTimeout(() => {
+        document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      }, 500);
+    } else if(link === 'manicure' && this.manicure === false) {
+      setTimeout(() => {
+        document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      }, 500);
+    } else if(link === 'waxing' && this.waxing === false) {
+      setTimeout(() => {
+        document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      }, 500);
+    } else if(link === 'kids' && this.kids === false) {
+      setTimeout(() => {
+        document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+      }, 500);
+    }
   }
 
   @HostListener("window:scroll", []) onWindowScroll() {
