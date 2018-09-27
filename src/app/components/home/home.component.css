@@ -4,7 +4,11 @@
 }
 /*remove above section*/
 
-/*Why styles section*/
+.section:nth-child(odd) {
+  background: whitesmoke;
+}
+
+/* Why styles section */
 .block {
   max-width: 475px;
 }
@@ -13,11 +17,36 @@
   margin-bottom: 17px;
 }
 
-/*Services styles section*/
-.services {
-  background-color: whitesmoke;
+/* testimonial section */
+.section.testimonials {
+  background-image: url(https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Photos-Blizzard-Downoad-Free-PIC-WPC009177.jpg);
 }
 
+.testimonial-container .carousel-indicators {
+  margin-top: 30px;
+  position: static;
+}
+
+.testimonial-container .carousel-indicators li {
+  background: red;
+}
+
+.testimonial-container .carousel-indicators li.active {
+  background: black;
+}
+
+.testimonial-container {
+  background: lightgrey;
+  padding: 40px 60px;
+}
+
+@media only screen and (max-width: 576px) {
+  .testimonial-container {
+    padding: 40px 30px;
+  }
+}
+
+/* Services section */
 .divider::after {
   content: '';
   display: inline-block;
@@ -26,7 +55,8 @@
   height: 3px;
 }
 
-.service-container {
+.service-container,
+.testimonial-container {
   margin-top: 35px;
 }
 
@@ -130,7 +160,8 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .service-container {
+  .service-container,
+  .testimonial-container {
     margin-top: 60px;
   }
 }
