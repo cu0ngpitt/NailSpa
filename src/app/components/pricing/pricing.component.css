@@ -7,56 +7,27 @@ ul {
   list-style: none;
 }
 
-.pedicure, .waxing {
-  background: whitesmoke;
+/* section titles */
+.service-title {
+  margin: 35px 0;
 }
 
-/*
-article {
-   position: relative;
-   border-top: 80px solid transparent;
-   margin: -30px 0 0;
-   -webkit-background-clip: padding-box;
-   -moz-background-clip: padding;
-   background-clip: padding-box;
+.service-title h4 {
+  margin-top: 10px;
 }
 
-article:before {
-   content: "";
-   position: absolute;
-   top: -2px;
-   left: 0;
-   right: 0;
-}
-*/
-
-article {
-  padding: 35px 0;
+.icon-pic img {
+  width: 80px;
+  height: 80px;
 }
 
-.pricing-title {
-  margin: 0 auto 30px auto;
-  position: relative;
-}
-
-.pricing-title::after {
-  position: absolute;
-  content: '';
-  height: 3px;
-  width: 70%;
-  background: pink;
-  transform: translate(-50%);
-  top: 50%;
-  z-index: 1;
-}
-
+/* service content */
 .pricing-heading span {
   padding-bottom: 6px;
   border-bottom: 2px solid pink;
 }
 
 .pricing-subtitle {
-  margin-top: 30px;
   margin-bottom: 35px;
 }
 
@@ -156,38 +127,27 @@ article {
   margin: 0 auto;
 }
 
-/* Pills navigation */
-.pills-box {
-  position: sticky;
-  top: 57px;
-  z-index: 2;
+/* Pills Navigation */
+.pills-nav {
+  border-top: 1px solid lightgrey;
   background: white;
-  margin-top: 20px;
-}
-
-.pills {
-  margin: 0 auto;
-}
-
-.nav-pills {
-  margin: 0 !important;
+  text-align: center;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  position: sticky;
+  bottom: 0;
+  font-size: 12px;
 }
 
-.pills .nav-item {
-  border: 1px solid lightgrey;
-  text-align: center;
+.pills-nav img {
+  width: 100%;
+  padding: 2px 18px 0 18px;
 }
 
-.pills .nav-link {
-  height: 100%;
-  border-radius: 0;
-  padding: 0;
-}
-
-.pills .active {
-  border-color: dodgerblue;
+@media only screen and (min-width: 500px) {
+  .pills-nav {
+    display: none;
+  }
 }
 
 /* Accordian */
@@ -200,10 +160,11 @@ article > * {
 .manicure.open,
 .waxing.open,
 .kids.open {
-  max-height: 3000px;
+  margin-top: 35px;
+  padding-bottom: 35px;
+  max-height: 50000px;
   opacity: 1;
-  transition: all 1s;
-  padding: 60px 0;
+  transition: max-height 1s, padding-bottom 1s, margin-top 1s, opacity 1s .25s;
 }
 
 .accordion .container {
@@ -215,7 +176,7 @@ article > * {
   opacity: 0;
   padding: 0px;
   overflow: hidden;
-  transition: padding 1s, max-height 1s, opacity .1s 1s;
+  transition: padding .8s, max-height .8s, opacity .8s .25s;
 }
 
 /* Back to top button */
@@ -225,7 +186,7 @@ article > * {
 
 .to-top.hidden {
   position: fixed;
-  bottom: 20px;
+  bottom: 0px;
   right: 30px;
   z-index: 99;
   font-size: 13px;
@@ -242,7 +203,7 @@ article > * {
 
 .to-top.show {
   position: fixed;
-  bottom: 20px;
+  bottom: 0px;
   right: 30px;
   z-index: 99;
   font-size: 13px;
@@ -259,8 +220,13 @@ article > * {
 
 /* For Widescreens: */
 @media only screen and (min-width: 1200px) {
-    article {
-      padding: 60px 0;
+    .nails.open,
+    .pedicure.open,
+    .manicure.open,
+    .waxing.open,
+    .kids.open {
+      margin-top: 60px;
+      padding-bottom: 60px;
     }
 
     .item-name {
@@ -289,48 +255,5 @@ article > * {
 
   .scent-list li {
     padding-left: 35%;
-  }
-}
-
-/* For nav pills */
-@media only screen and (max-width: 767px) {
-  .container.pills {
-    position: sticky;
-    top: 58px;
-    z-index: 9;
-    background: white;
-  }
-
-  .nav-pills {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-  }
-
-  .pills .nav-link {
-    padding: 0;
-  }
-
-  .pills .nails {
-    grid-column: 1 / 3;
-  }
-
-  .pills .pedi {
-    grid-column: 3 / 5;
-  }
-
-  .pills .mani {
-    grid-column: 5 / 7;
-  }
-  .pills .wax {
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
-  }
-  .pills .kids {
-    grid-column: 4 / 6;
-    grid-row: 2 / 3;
-  }
-
-  .pills .wax, .pills .kids {
-    margin-top: -1px;
   }
 }
