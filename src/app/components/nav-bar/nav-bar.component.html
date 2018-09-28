@@ -70,7 +70,7 @@
             <a class="nav-link dropdown-toggle" (click)="toggleDropdown()" href="javascript:void(0)"></a>
             <a class="nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
           </div>
-            <a class="dropdown-item" routerLink="/pricing" (click)="toggleNavbar()" (click)="dropState()" [class.closed]="!dropdownState" [class.open]="dropdownState">Pricing</a>
+            <a class="dropdown-item" routerLink="/services/pricing" (click)="toggleNavbar()" (click)="dropState()" [class.closed]="!dropdownState" [class.open]="dropdownState">Pricing</a>
           <div class="nav-item">
             <a class="nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
           </div>
