@@ -104,7 +104,7 @@ export class PricingComponent implements OnInit {
     }*/
   }
 
-  @HostListener("window:scroll", []) onWindowScroll() {
+  /* @HostListener("window:scroll", []) onWindowScroll() {
     this.scrollFunction();
   }
   // When the user scrolls down 20px from the top of the document, show the button
@@ -119,5 +119,5 @@ export class PricingComponent implements OnInit {
   // When the user clicks on the button, scroll to the top of the document
   topFunction() {
     window.scrollTo({top: 0, behavior: "smooth"});
-  }
+  } */
 }

@@ -9,7 +9,11 @@ ul {
 
 /* section titles */
 .service-title {
-  margin: 50px 0 35px 0;
+  margin-bottom: 35px;
+}
+
+.service-title .icon-pic {
+  padding-top: 50px;
 }
 
 .service-title h4 {
@@ -127,9 +131,50 @@ ul {
   margin: 0 auto;
 }
 
+/* Prev, Next Button */
+article {
+  position: relative;
+}
+
+.next {
+  position: sticky;
+  bottom: 10px;
+  text-align: right;
+}
+
+.next a {
+  display: block;
+}
+
+.fa-angle-double-up {
+  padding-bottom: 12px;
+  color: black;
+  opacity: .5;
+}
+
+.fa-angle-double-down {
+  color: black;
+  opacity: .5;
+}
+
+@media only screen and (max-width: 991.5px) {
+  .fa-angle-double-up,
+  .fa-angle-double-down {
+    transform: scale(.75);
+  }
+}
+
+@media only screen and (max-width: 449px) {
+  .fa-angle-double-up,
+  .fa-angle-double-down {
+    display: none;
+  }
+}
+
 /* Pills Navigation */
 .pills-nav {
   border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
   background: white;
   text-align: center;
   display: grid;
@@ -137,6 +182,10 @@ ul {
   position: sticky;
   bottom: 0;
   font-size: 12px;
+}
+
+.pills-nav div:not(:last-child){
+  border-right: 2px solid red;
 }
 
 .pills-nav img {
@@ -151,6 +200,7 @@ ul {
 }
 
 /* Accordian */
+/*
 article > * {
   position: relative;
 }
@@ -178,6 +228,7 @@ article > * {
   overflow: hidden;
   transition: padding .8s, max-height .8s, opacity .8s .25s;
 }
+*/
 
 /* Back to top button */
 .fa-angle-up {
