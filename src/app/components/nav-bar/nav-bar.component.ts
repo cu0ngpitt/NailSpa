@@ -17,7 +17,6 @@ export class NavBarComponent implements OnInit {
   navbarPosition: any;
 
   button: boolean = false;
-  dropdownState: boolean = false;
 
   constructor(private sidebar: SidebarService,
               public router: Router) { }
@@ -35,7 +34,7 @@ export class NavBarComponent implements OnInit {
       if(windowScroll > this.navbarPosition) {
         this.sticky = true;
         console.log(windowScroll);
-        console.log(this.navbarPosition);
+        console.log('The navbar position is at ' + this.navbarPosition);
       } else {
         this.sticky = false;
       }
@@ -46,21 +45,7 @@ export class NavBarComponent implements OnInit {
       this.button = true;
     } else if(this.button === true) {
       this.button = false;
-      this.dropdownState = false;
     }
     this.sidebar.toggleNavbar();
-  }
-
-  dropState() {
-    this.dropdownState = false;
-  }
-
-  toggleDropdown() {
-    if(this.dropdownState === false) {
-      this.dropdownState = true;
-    } else if(this.dropdownState === true) {
-      this.dropdownState = false;
-    }
-    this.sidebar.toggleDropdown();
   }
 }

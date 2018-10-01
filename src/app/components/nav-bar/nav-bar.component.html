@@ -1,84 +1,68 @@
-<div class="outer" [class.sticky]="sticky" #stickyNavbar>
-  <div class="inner">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <button class="navbar-toggler" type="button" (click)="toggleNavbar()" (click)="dropState()">
-        <div class="menu-icon" [class.closed]="!button" [class.open]="button">
-          <div class="bar1" [class.closed]="!button" [class.open]="button"></div>
-          <div class="bar2" [class.closed]="!button" [class.open]="button"></div>
-          <div class="bar3" [class.closed]="!button" [class.open]="button"></div>
-        </div>
-      </button>
+<div class="navContainer">
+  <div class="outer" [class.sticky]="sticky" #stickyNavbar>
+    <div class="inner">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+          <div class="menu-icon" [class.closed]="!button" [class.open]="button">
+            <div class="bar1" [class.closed]="!button" [class.open]="button"></div>
+            <div class="bar2" [class.closed]="!button" [class.open]="button"></div>
+            <div class="bar3" [class.closed]="!button" [class.open]="button"></div>
+          </div>
+        </button>
 
-      <!-- Navbar for home page only -->
-      <div class="box" *ngIf="router.url === '/home'">
-        <!-- Regular navbar, shows on screens over 992px -->
-        <a class="navbar-brand home" routerLink="/home">
-          <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
-          Nails & Spa
-        </a>
-        <div class="nav home">
-          <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
-          <div class="nav">
-          <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
-            <div class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                   <a class="dropdown-item" routerLink="/services/pricing" (click)="toggleNavbar()">Pricing</a>
-                 </div>
-             </div>
-           </div>
-             <a class="navbar-brand" routerLink="/home">
-               <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
-               Nails & Spa
-             </a>
-          <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
-          <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
-        </div>
-      </div>
-
-      <!-- Navbar for pages NOT home -->
-        <div class="box" *ngIf="router.url !== '/home'">
-          <a class="navbar-brand" routerLink="/home">
+        <!-- Navbar for home page only -->
+        <div class="box" *ngIf="router.url === '/home'">
+          <!-- Regular navbar, shows on screens over 992px -->
+          <a class="navbar-brand home" routerLink="/home">
             <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
             Nails & Spa
           </a>
-          <!-- Regular navbar, shows on screens over 992px -->
-          <div class="nav navbar">
+          <div class="nav home">
             <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
-            <div class="nav">
             <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
-              <div class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"></a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                     <a class="dropdown-item" routerLink="/services/pricing" (click)="toggleNavbar()">Pricing</a>
-                   </div>
-               </div>
-             </div>
+            <a class="navbar-brand" routerLink="/home">
+             <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
+             Nails & Spa
+            </a>
             <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
             <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
           </div>
         </div>
 
+        <!-- Navbar for pages NOT home -->
+          <div class="box" *ngIf="router.url !== '/home'">
+            <a class="navbar-brand" routerLink="/home">
+              <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
+              Nails & Spa
+            </a>
+            <!-- Regular navbar, shows on screens over 992px -->
+            <div class="nav navbar">
+              <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
+              <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
+              <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
+              <a class="nav-item nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
+            </div>
+          </div>
 
-        <!-- Sidebar nav, shows under 992px screens -->
-      <div class="navbar-collapse">
-        <div class="nav sidebar" id="navbarNav">
-          <div class="nav-item">
-            <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link dropdown-toggle" (click)="toggleDropdown()" href="javascript:void(0)"></a>
-            <a class="nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
-          </div>
-            <a class="dropdown-item" routerLink="/services/pricing" (click)="toggleNavbar()" (click)="dropState()" [class.closed]="!dropdownState" [class.open]="dropdownState">Pricing</a>
-          <div class="nav-item">
-            <a class="nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
-          </div>
-          <div class="nav-item">
-            <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
+
+          <!-- Sidebar nav, shows under 992px screens -->
+        <div class="navbar-collapse">
+          <div class="nav sidebar" id="navbarNav">
+            <div class="nav-item">
+              <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" routerLink="/contact" routerLinkActive="active" (click)="toggleNavbar()">Contact Us</a>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
 </div>

@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
 })
 export class SidebarService {
   public state = 'inactive';
-  public dropdownState = 'inactive';
 
   constructor() { }
 
@@ -16,14 +15,6 @@ export class SidebarService {
     } else if (this.state === 'active') {
       document.getElementById('navbarNav').style.width = '0';
       this.state = 'inactive';
-    }
-  }
-
-  toggleDropdown() {
-    if (this.dropdownState === 'inactive') {
-      this.dropdownState = 'active';
-    } else if (this.dropdownState === 'active') {
-      this.dropdownState = 'inactive';
     }
   }
 }

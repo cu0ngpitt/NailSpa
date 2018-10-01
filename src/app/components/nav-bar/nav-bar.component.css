@@ -3,6 +3,10 @@
   top: 0;
 }
 
+.navContainer {      /* this element is needed to keep the screen from being jumpy */
+  height: 56.4px;    /* adjust the height if the overall navbar height changes */
+}
+
 .outer {
   background-color: white;
   width: 100%;
@@ -56,10 +60,6 @@
   padding-right: 0;
 }
 
-.dropdown-toggle {
-  padding-left: 6px;
-}
-
 .nav-link.nav-item {
   margin-left: 45px;
 }
@@ -69,6 +69,10 @@
 }
 
 @media only screen and (max-width: 991.5px) {
+  .navContainer{    /* this element is needed to keep the screen from being jumpy */
+    height: 59px;   /* need to adjust the height if navbar height changes */
+  }
+
   .active {
     background: pink;
   }
@@ -148,41 +152,5 @@
   .bar3.closed {
      transform: rotate(0) translate(0, 0);
      transition: all 1s;
-  }
-
-  /* Dropdown menu for sidebar */
-  .sidebar .dropdown-toggle {
-    position: absolute;
-    transform: translate(210px);
-  }
-
-  .sidebar .nav-item:hover, .sidebar .dropdown-item:hover {
-    background: pink;
-    transition: all .6s ease-out;
-  }
-
-  .sidebar .nav-item:first-child {
-    margin-top: 22px;
-  }
-
-  .sidebar .nav-item {
-    margin-top: 10px;
-  }
-
-  .sidebar .dropdown-item.closed {
-    height: 0;
-    border: 0;
-    margin-top: 0;
-    padding: 0 24px;
-    overflow-y: hidden;
-    transition: all 1s;
-  }
-
-  .sidebar .dropdown-item.open {
-    height: 40px;
-    margin-top: 10px;
-    border: 0;
-    padding: 8px 32px;
-    transition: all 1s;
   }
 }
