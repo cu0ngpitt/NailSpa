@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
+
+const scrollPosition = window.pageYOffset;
 
 @Component({
   selector: 'app-services',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit() {
   }
 
+  scrollTo(link) {
+    let fragment = link;
+    document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+  }  
 }
