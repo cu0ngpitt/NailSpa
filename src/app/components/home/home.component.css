@@ -4,6 +4,7 @@
 }
 /*remove above section*/
 
+/* Alternating background color of each section */
 .section:nth-child(odd) {
   background: whitesmoke;
 }
