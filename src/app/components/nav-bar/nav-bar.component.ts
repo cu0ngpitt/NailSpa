@@ -19,7 +19,8 @@ export class NavBarComponent implements OnInit {
   button: boolean = false;
 
   constructor(private sidebar: SidebarService,
-              public router: Router) { }
+              public router: Router,
+              private eRef: ElementRef) { }
 
   ngOnInit() {
   }
@@ -34,7 +35,6 @@ export class NavBarComponent implements OnInit {
       if(windowScroll > this.navbarPosition) {
         this.sticky = true;
         console.log(windowScroll);
-        console.log('The navbar position is at ' + this.navbarPosition);
       } else {
         this.sticky = false;
       }
@@ -48,4 +48,13 @@ export class NavBarComponent implements OnInit {
     }
     this.sidebar.toggleNavbar();
   }
+
+  @HostListener('document:click', ['$event'])
+    clickOut(event) {
+      if(!this.eRef.nativeElement.contains(event.target) && this.button === true) {
+        this.button = false;
+        this.sidebar.toggleNavbar();
+        console.log("clicked outside");
+      }
+    }
 }
