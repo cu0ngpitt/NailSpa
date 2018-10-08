@@ -12,7 +12,7 @@
 }
 
 :host >>> .section-page-title {
-  padding: 80px 0;  
+  padding: 80px 0;
 }
 
 :host >>> .page-title {
@@ -68,7 +68,7 @@
   padding: 0;
 }
 
-ul, li {
+#contact-bar li {
   display: inline-block;
 }
 
@@ -84,6 +84,11 @@ ul, li {
   margin-left: 30px;
 }
 
+/* Contact box */
+.contact-box {
+  display: none;
+}
+
 .outer {
   padding: 0 15px;
 }
@@ -97,6 +102,103 @@ ul, li {
 @media only screen and (max-width: 991.5px) {
     .outer {
       display: none;
+    }
+
+    /* Call us box */
+    .contact-box {
+      display: block;
+      position: fixed;
+      top: 50px;
+      right: 0;
+      padding: 15px;
+      font-size: 14px;
+      background: white;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: transform .5s, opacity .5s, visibility .5s;
+    }
+
+    .show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(10px);
+      transition: .5s;
+    }
+
+    .contact-aside {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+
+    .call {
+      margin-bottom: 15px;
+    }
+
+    /* Call us sidebar button */
+    .contact-button {
+      position: fixed;
+      display: block;
+      top: 8px;
+      right: 0;
+      width: 43px;
+      height: 43px;
+      cursor: pointer;
+      z-index: 9;
+    }
+
+    span {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      top: 50%;
+      left: 50%;
+      margin-top: -3px;
+      margin-left: -3px;
+      border-radius: 50%;
+      background-color: #808080;
+      transition: .5s;
+    }
+
+    span::before {
+      position: absolute;
+      bottom: 100%;
+      margin-bottom: 3px;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #808080;
+      transition: .5s;
+    }
+
+    span::after {
+      position: absolute;
+      top: 100%;
+      margin-top: 3px;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: #808080;
+      transition: .5s;
+    }
+
+    span.active::before {
+      transform: translateY(18px);
+      transition: .5s;
+    }
+
+    span.active::after {
+      transform: translateY(-18px);
+      transition: .5s;
+    }
+
+    .active {
+      transform: scale(.7);
+      transition: .5s;
     }
 }
 

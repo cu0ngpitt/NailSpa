@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  show: boolean = false;
+
+  contactBox() {
+    if(this.show === false) {
+      this.show = true;
+    } else if (this.show === true) {
+      this.show = false;
+    }
+  }
 }
