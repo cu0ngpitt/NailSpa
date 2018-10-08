@@ -169,9 +169,8 @@ article {
   }
 }
 
-@media only screen and (max-width: 449px) {
-  .fa-angle-double-up,
-  .fa-angle-double-down {
+@media only screen and (max-width: 499.5px) {
+  .next {
     display: none;
   }
 }
@@ -187,6 +186,17 @@ article {
   position: sticky;
   bottom: 0;
   font-size: 12px;
+  opacity: 0;
+  transform: translate3d(0, 10px, 0);
+  visibility: hidden;
+  transition: transform 1s, opacity 1s, visibility 1s;
+}
+
+.pills-nav.show {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+  visibility: visible;
+  transition: 1s;
 }
 
 .pills-nav div:not(:last-child){

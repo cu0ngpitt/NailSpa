@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
-const scrollPosition = window.pageYOffset;
 
 @Component({
   selector: 'app-services',
@@ -8,6 +7,8 @@ const scrollPosition = window.pageYOffset;
   styleUrls: ['./services.component.css']
 })
 export class ServicesComponent implements OnInit {
+  show: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -16,5 +17,15 @@ export class ServicesComponent implements OnInit {
   scrollTo(link) {
     let fragment = link;
     document.querySelector('#' + fragment).scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
-  }  
+  }
+
+  @HostListener('window:scroll', ['$event'])
+    handleScroll() {
+      const windowScroll = window.pageYOffset;
+      if(windowScroll > 0) {
+        this.show = true;
+      } else {
+        this.show = false;
+      }
+    }
 }
