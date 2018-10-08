@@ -82,6 +82,10 @@
     display: inline-block;
   }
 
+  .navbar {
+    justify-content: flex-start;
+  }
+
   .nav.navbar {
     display: none;
   }
