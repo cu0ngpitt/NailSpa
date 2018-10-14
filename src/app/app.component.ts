@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
+
+import { SidebarService } from './services/sidebar.service';
 
 @Component({
   selector: 'app-root',
@@ -6,13 +8,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  show: boolean = false;
+
+  constructor(private sidebar: SidebarService,
+              private eRef: ElementRef) {}
 
   contactBox() {
-    if(this.show === false) {
-      this.show = true;
-    } else if (this.show === true) {
-      this.show = false;
-    }
+    this.sidebar.contactBox();
+  }
+
+  test() {
+    console.log("test");
   }
 }
