@@ -35,6 +35,7 @@ export class NavBarComponent implements OnInit {
       if(windowScroll > this.navbarPosition) {
         this.sticky = true;
         console.log(windowScroll);
+        console.log("navbar position" + this.navbarPosition);
       } else {
         this.sticky = false;
       }

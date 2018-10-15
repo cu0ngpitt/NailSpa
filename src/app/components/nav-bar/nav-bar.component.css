@@ -10,7 +10,7 @@
 .outer {
   background-color: white;
   width: 100%;
-  z-index: 9;
+  z-index: 16;
 }
 
 .inner {
@@ -21,6 +21,18 @@
 #logo {
   width: 30px;
   height: 30px;
+}
+
+.nav-item {
+  color: grey;
+}
+
+.active {
+  color: red;
+}
+
+.nav-item:hover {
+  color: red;
 }
 
 .nav.home {
