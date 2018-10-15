@@ -15,10 +15,15 @@ article {
 /* section titles */
 .service-title {
   margin-bottom: 35px;
+  padding-top: 60px;
 }
 
-.service-title .icon-pic {
-  padding-top: 55px;
+.icon-pic {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: pink;
 }
 
 .service-title h4 {
@@ -199,13 +204,16 @@ article {
   transition: 1s;
 }
 
-.pills-nav div:not(:last-child){
-  border-right: 2px solid red;
+.pills-pic {
+  width: 1fr;
+  height: 1fr;
+  border-radius: 50%;
+  background: pink;
+  margin: 2px 18px 0 18px;
 }
 
 .pills-nav img {
   width: 100%;
-  padding: 2px 18px 0 18px;
 }
 
 @media only screen and (min-width: 500px) {

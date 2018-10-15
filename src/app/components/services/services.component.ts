@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
+import { SidebarService } from '../../services/sidebar.service';
 
 @Component({
   selector: 'app-services',
@@ -9,7 +10,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 export class ServicesComponent implements OnInit {
   show: boolean = false;
 
-  constructor() { }
+  constructor(private sidebar: SidebarService) { }
 
   ngOnInit() {
   }

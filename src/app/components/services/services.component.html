@@ -1,3 +1,5 @@
+<body (click)="this.sidebar.closeContactBox()">
+
 <section class="section-page-title">
   <div class="container">
     <h1 class="page-title">Services</h1>
@@ -18,9 +20,9 @@
     <article class="nails" id="nails">
       <div class="service-title">
         <div class="icon-pic">
-          <img src="https://us.123rf.com/450wm/lineartestpilot/lineartestpilot1603/lineartestpilot160335288/53911604-freehand-textured-cartoon-nail.jpg?ver=6" alt="nail pic">
-          <h4>Nail Services</h4>
+          <img src="/../../assets/images/nails.png" alt="nail pic">
         </div>
+        <h4>Nail Services</h4>
       </div>
 
       <div class="container">
@@ -185,9 +187,9 @@
     <article class="pedicure" id="pedicure">
       <div class="service-title">
         <div class="icon-pic">
-          <img src="https://media.istockphoto.com/vectors/female-legs-barefoot-with-hands-holding-the-ankle-side-view-vector-vector-id1005850290" alt="pedi pic">
-          <h4>Pedicures</h4>
+          <img src="/../../assets/images/pedicure.png" alt="pedi pic">
         </div>
+        <h4>Pedicures</h4>
       </div>
       <div class="container">
         <div class="pricing-content row justify-content-center">
@@ -274,9 +276,9 @@
     <article class="manicure" id="manicure">
       <div class="service-title">
         <div class="icon-pic">
-          <img src="https://images.cdn2.stockunlimited.net/preview1300/female-hand_1319784.jpg" alt="mani pic">
-          <h4>Manicures</h4>
+          <img src="/../../assets/images/manicure.png" alt="mani pic">
         </div>
+        <h4>Manicures</h4>
       </div>
       <div class="container">
         <div class="pricing-content row justify-content-center">
@@ -299,15 +301,20 @@
             </div>
           </div>
         </div>
+
+        <nav class="next">
+          <a href="javascript:void(0)" (click)="scrollTo('pedicure')"><i class="fas fa-2x fa-angle-double-up"></i></a>
+          <a href="javascript:void(0)" (click)="scrollTo('waxing')"><i class="fas fa-2x fa-angle-double-down"></i></a>
+        </nav>
       </div>
     </article>
 
     <article class="waxing" id="waxing">
       <div class="service-title">
         <div class="icon-pic">
-          <img src="http://laoblogger.com/images/clip-art-honey-2.jpg" alt="wax pic">
-          <h4>Waxing</h4>
+          <img src="/../../assets/images/waxing.png" alt="wax pic">
         </div>
+        <h4>Waxing</h4>
       </div>
       <div class="container">
         <div class="pricing-content row justify-content-center">
@@ -367,9 +374,9 @@
     <article class="kids" id="kids">
       <div class="service-title">
         <div class="icon-pic">
-          <img src="http://laoblogger.com/images/clip-art-honey-2.jpg" alt="wax pic">
-          <h4>Just for Kids</h4>
+          <img src="/../../assets/images/kids.png" alt="kids pic">
         </div>
+        <h4>Just for Kids</h4>
       </div>
       <div class="container">
         <p class="subtitle-text">Kids can enjoy a day at the spa too! Must be 10 years of age and under.</p>
@@ -409,34 +416,36 @@
 
     <nav class="pills-nav" [class.show]="show">
       <a href="javascript:void(0)" (click)="scrollTo('nails')">
-        <div class="nails">
-          <img src="https://us.123rf.com/450wm/lineartestpilot/lineartestpilot1603/lineartestpilot160335288/53911604-freehand-textured-cartoon-nail.jpg?ver=6" alt="nail pic">
-          <p>Nails</p>
+        <div class="pills-pic">
+          <img src="/../../assets/images/nails.png" alt="nail pic">
         </div>
+        <p>Nails</p>
       </a>
       <a href="javascript:void(0)" (click)="scrollTo('pedicure')">
-        <div class="pedicure">
-          <img src="https://media.istockphoto.com/vectors/female-legs-barefoot-with-hands-holding-the-ankle-side-view-vector-vector-id1005850290" alt="pedi pic">
-          <p>Pedicure</p>
+        <div class="pills-pic">
+          <img src="/../../assets/images/pedicure.png" alt="pedi pic">
         </div>
+        <p>Pedicure</p>
       </a>
       <a href="javascript:void(0)" (click)="scrollTo('manicure')">
-        <div class="manicure">
-          <img src="https://images.cdn2.stockunlimited.net/preview1300/female-hand_1319784.jpg" alt="mani pic">
-          <p>Manicure</p>
+        <div class="pills-pic">
+          <img src="/../../assets/images/manicure.png" alt="mani pic">
         </div>
+        <p>Manicure</p>
       </a>
       <a href="javascript:void(0)" (click)="scrollTo('waxing')">
-        <div class="waxing">
-          <img src="http://laoblogger.com/images/clip-art-honey-2.jpg" alt="wax pic">
-          <p>Waxing</p>
+        <div class="pills-pic">
+          <img src="/../../assets/images/waxing.png" alt="wax pic">
         </div>
+        <p>Waxing</p>
       </a>
       <a href="javascript:void(0)" (click)="scrollTo('kids')">
-        <div class="kids">
-          <img src="http://laoblogger.com/images/clip-art-honey-2.jpg" alt="wax pic">
-          <p>Kids</p>
+        <div class="pills-pic">
+          <img src="/../../assets/images/kids.png" alt="wax pic">
         </div>
+        <p>Kids</p>
       </a>
     </nav>
 </section>
+
+</body>
