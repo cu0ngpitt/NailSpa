@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SidebarService } from '../../services/sidebar.service';
+
 @Component({
   selector: 'app-gallery',
   templateUrl: './gallery.component.html',
@@ -7,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GalleryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sidebar: SidebarService) { }
 
   ngOnInit() {
   }

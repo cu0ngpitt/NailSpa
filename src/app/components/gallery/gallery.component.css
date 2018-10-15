@@ -1,11 +1,35 @@
+/* only hiding the page title until this page can be finished */
+.section-page-title {
+  display: none;
+}
+
 .gallery {
   text-align: center;
 }
 
-.gallery h1 {
-  margin-bottom: 30px;
+/* Coming soon section - delete when gallery is complete */
+* > * {
+  margin: 0;
 }
 
-.gallery img {
-  margin-bottom: 30px;
+.soon {
+  text-align: center;
+  background-image: url("/../../assets/images/coming-soon.jpg");
+  background-size: cover;
+}
+
+.soon-inner {
+  min-height: 100vh;
+  background: rgb(255, 255, 255); /* fallback color */
+  background: rgba(255, 255, 255, .7);
+  display: grid;
+  grid-template-rows: 1vh, 1vh;
+}
+
+.soon h1 {
+  align-self: center;
+}
+
+.soon p {
+  padding: 35px 15px 0 15px;
 }
