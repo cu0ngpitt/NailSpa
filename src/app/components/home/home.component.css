@@ -1,8 +1,8 @@
-/*remove this section later, just testing*/
-.carousel-item .d-block {
-  max-height: 646px;
+/* carousel images */
+.carousel img {
+  margin: 0 auto;
+  max-width: 100%;
 }
-/*remove above section*/
 
 /* Alternating background color of each section */
 .section:nth-child(odd) {
@@ -20,7 +20,8 @@
 
 /* testimonial section */
 .section.testimonials {
-  background-image: url(https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Photos-Blizzard-Downoad-Free-PIC-WPC009177.jpg);
+  background-image: url("/../../assets/images/testimonial.jpg");
+  background-size: cover;
 }
 
 .testimonial-container .carousel-indicators {
@@ -37,7 +38,8 @@
 }
 
 .testimonial-container {
-  background: lightgrey;
+  background: rgb(255, 255, 255); /* Fallback for older browsers */
+  background: rgba(255, 255, 255, .88);
   padding: 40px 60px;
 }
 
@@ -77,6 +79,14 @@
   width: 145px;
 }
 
+.icon-pic {
+  height: 80px;
+  width: 80px;
+  background: pink;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
 .icon-pic img {
   width: 80px;
   height: 80px;
@@ -108,6 +118,11 @@
   width: 85%;
   background: black;
   transform: translateX(-50%);
+}
+
+/* Portfolio section */
+.btn {
+  background: lightgrey;
 }
 
 @media only screen and (min-width: 764px) {
