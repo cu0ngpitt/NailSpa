@@ -59,6 +59,10 @@ input, textarea {
   margin: 0;
 }
 
+.btn {
+  background: lightgrey;
+}
+
 /* For desktops and smaller: */
 @media only screen and (max-width: 812px) {
     .contact {
