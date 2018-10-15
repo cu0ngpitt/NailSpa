@@ -9,7 +9,7 @@ import { SidebarService } from './services/sidebar.service';
 })
 export class AppComponent {
 
-  constructor(private sidebar: SidebarService,
+  constructor(public sidebar: SidebarService,
               private eRef: ElementRef) {}
 
   contactBox() {

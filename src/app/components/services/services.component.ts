@@ -10,7 +10,7 @@ import { SidebarService } from '../../services/sidebar.service';
 export class ServicesComponent implements OnInit {
   show: boolean = false;
 
-  constructor(private sidebar: SidebarService) { }
+  constructor(public sidebar: SidebarService) { }
 
   ngOnInit() {
   }
