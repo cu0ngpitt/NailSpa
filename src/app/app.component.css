@@ -105,6 +105,10 @@
   display: none;
 }
 
+.call a {
+  color: black;
+}
+
 .outer {
   padding: 0 15px;
 }

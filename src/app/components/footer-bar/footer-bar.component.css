@@ -12,6 +12,10 @@
   height: 30px;
 }
 
+a {
+  color: black;
+}
+
 .links {
   margin: 0 auto;
 }
