@@ -16,6 +16,14 @@ a {
   color: black;
 }
 
+a:hover {
+  color: red;
+}
+
+.active {
+  color: red;
+}
+
 .links {
   margin: 0 auto;
 }
