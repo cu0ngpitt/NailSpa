@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+h1 {
+  font-size: 4rem;  
+}
+
 .soon {
   text-align: center;
   background-image: url("/../../assets/images/coming-soon.jpg");
