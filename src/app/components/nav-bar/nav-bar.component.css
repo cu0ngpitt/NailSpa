@@ -23,15 +23,7 @@
   height: 30px;
 }
 
-.nav-item {
-  color: grey;
-}
-
 .active {
-  color: red;
-}
-
-.nav-item:hover {
   color: red;
 }
 
