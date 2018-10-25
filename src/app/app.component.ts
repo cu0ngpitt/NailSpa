@@ -8,6 +8,7 @@ import { SidebarService } from './services/sidebar.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  sticky: boolean = false;
 
   constructor(public sidebar: SidebarService,
               private eRef: ElementRef) {}
@@ -16,7 +17,13 @@ export class AppComponent {
     this.sidebar.contactBox();
   }
 
-  test() {
-    console.log("test");
-  }
+  @HostListener('window:scroll', ['$event'])
+    handleScroll() {
+      const windowScroll = window.pageYOffset;
+      if(windowScroll > 0) {
+        this.sticky = true;
+      } else {
+        this.sticky = false;
+      }
+    }
 }

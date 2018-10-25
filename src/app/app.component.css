@@ -1,5 +1,5 @@
 :host >>> .section-page-title {
-  background-color: mistyrose;
+  background-color: #ffe6ea;
 }
 /*remove the styles above when done, only used for visual*/
 
@@ -128,7 +128,7 @@
     .contact-box {
       display: block;
       position: fixed;
-      top: 50px;
+      top: 54px;
       right: 0;
       padding: 15px;
       font-size: 14px;
@@ -137,7 +137,11 @@
       visibility: hidden;
       transform: translateY(-10px);
       transition: transform .5s, opacity .5s, visibility .5s;
-      z-index: 1;
+      z-index: 1;      
+    }
+
+    .contact-box.sticky {
+      top: 38px;
     }
 
     .show {
@@ -167,6 +171,12 @@
       height: 43px;
       cursor: pointer;
       z-index: 17;
+      transition: 1s;
+    }
+
+    .contact-button.sticky {
+      top: 0;
+      transition: 1s;
     }
 
     span {

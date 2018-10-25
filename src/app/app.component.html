@@ -10,11 +10,11 @@
   </div>
 </div>
 
-<div class="contact-button" (click)="contactBox()">
+<div class="contact-button" [class.sticky]="sticky" (click)="contactBox()">
   <span [class.active]="this.sidebar.show"></span>
 </div>
 
-<div class="contact-box" [class.show]="this.sidebar.show">
+<div class="contact-box" [class.show]="this.sidebar.show" [class.sticky]="sticky">
   <ul class='contact-aside'>
     <li class="call"><strong>Call Us: </strong><a href="tel:(972) 952-0232">(972) 952-0232</a></li>
     <li class="open"><strong>Opening Hours:</strong></li>
