@@ -2,6 +2,10 @@
   padding: 80px 0 80px 0;
 }
 
+.section-page-title {
+  background-color: #ffe6ea;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
@@ -13,11 +17,21 @@
   left: 35px;
   height: 24px;
   width: 24px;
+  color: pink;
 }
 
 .contact-info .fa-phone {
   position: absolute;
   top: 5px;
+}
+
+a {
+  transition: 1.5s;
+}
+
+a:hover {
+  color: pink;
+  transition: 1.5s;
 }
 
 ul {
