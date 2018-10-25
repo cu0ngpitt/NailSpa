@@ -1,7 +1,7 @@
-<div class="navContainer">
+<div class="navContainer" [class.stick]="sticky">
   <div class="outer" [class.sticky]="sticky" #stickyNavbar>
     <div class="inner">
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav class="navbar navbar-expand-lg navbar-light" [class.stick]="sticky">
         <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
           <div class="menu-icon" [class.closed]="!button" [class.open]="button">
             <div class="bar1" [class.closed]="!button" [class.open]="button"></div>
@@ -15,14 +15,14 @@
           <!-- Regular navbar, shows on screens over 992px -->
           <a class="navbar-brand home" routerLink="/home">
             <!-- This image is for mobile devices -->
-            <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
+            <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block" id="logo" alt="Logo">
             Nails & Spa
           </a>
           <div class="nav home">
             <a class="nav-item nav-link" routerLink="/home" routerLinkActive="active" (click)="toggleNavbar()">Home</a>
-            <a class="nav-item nav-link services" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
+            <a class="nav-item nav-link" routerLink="/services" routerLinkActive="active" (click)="toggleNavbar()">Services</a>
             <a class="navbar-brand" routerLink="/home">
-             <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
+             <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block" id="logo" alt="Logo">
              Nails & Spa
             </a>
             <a class="nav-item nav-link" routerLink="/gallery" routerLinkActive="active" (click)="toggleNavbar()">Gallery</a>
@@ -33,7 +33,7 @@
         <!-- Navbar for pages NOT home -->
           <div class="box" *ngIf="router.url !== '/home'">
             <a class="navbar-brand" routerLink="/home">
-              <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block align-top" id="logo" alt="Logo">
+              <img src="https://www.nailpolishdirect.co.uk/images/cuccio-red-lights-in-amsterdam-colour-nail-polish-13ml-p9892-88004_zoom.jpg" class="d-inline-block" id="logo" alt="Logo">
               Nails & Spa
             </a>
             <!-- Regular navbar, shows on screens over 992px -->

@@ -4,7 +4,13 @@
 }
 
 .navContainer {      /* this element is needed to keep the screen from being jumpy */
-  height: 56.4px;    /* adjust the height if the overall navbar height changes */
+  height: 64px;    /* adjust the height if the overall navbar height changes */
+  transition: 1s;
+}
+
+.navContainer.stick {
+  height: 48px;
+  transition: 1s;
 }
 
 .outer {
@@ -16,6 +22,16 @@
 .inner {
   margin: 0 auto;
   max-width: 1200px;
+}
+
+.navbar {
+  padding: 8px 0;
+  transition: 1s;
+}
+
+.navbar.stick {
+  padding: 0;
+  transition: 1s;
 }
 
 #logo {
@@ -31,11 +47,19 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .home .nav-link,
 .navbar-brand {
   margin: 0;
+}
+
+.navbar-brand {
+  font-family: 'Euphoria Script', cursive;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 0;
 }
 
 .navbar-brand.home {
@@ -61,10 +85,6 @@
   transition: 0.4s;
 }
 
-.navbar {
-  padding: 8px 0;
-}
-
 .services {
   padding-right: 0;
 }
@@ -78,9 +98,13 @@
 }
 
 @media only screen and (max-width: 991.5px) {
-  .navContainer{    /* this element is needed to keep the screen from being jumpy */
-    height: 59px;   /* need to adjust the height if navbar height changes */
+/* this is for the navbar when is switches to the dropdown menu
+   currently not needed because its height is the same as reg navbar
+
+  .navContainer{    /* this element is needed to keep the screen from being jumpy
+    height: px;   /* need to adjust the height if navbar height changes
   }
+*/
 
   .active {
     background: pink;
