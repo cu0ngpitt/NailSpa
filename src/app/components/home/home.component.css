@@ -1,6 +1,16 @@
 .carousel-control-prev {
   background: red;
 }
+#test {
+  height:200px;
+  width: 100%;
+  background: ;
+}
+.test {
+  height: 2rem;
+  width: 100%;
+  background: pink;
+}
 /* carousel images */
 .carousel img {
   margin: 0 auto;

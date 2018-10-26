@@ -13,5 +13,12 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
   }
-  
+
+  onPanLeft() {
+    document.getElementById('carousel-control-prev').click();
+  }
+
+  onPanRight() {
+    document.getElementById('carousel-control-next').click();
+  }
 }
