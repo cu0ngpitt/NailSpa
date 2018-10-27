@@ -1,24 +1,12 @@
-.carousel-control-prev {
-  background: red;
-}
-#test {
-  height:200px;
-  width: 100%;
-  background: ;
-}
-.test {
-  height: 2rem;
-  width: 100%;
-  background: pink;
-}
 /* carousel images */
 .carousel img {
   margin: 0 auto;
   max-width: 100%;
 }
 
-ol.carousel-indicators {
+.slides .carousel-indicators {
   z-index: 1;
+  padding-bottom: 16px;
 }
 
 .carousel-indicators li {
