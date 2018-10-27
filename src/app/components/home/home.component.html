@@ -1,5 +1,4 @@
 <body (click)="this.sidebar.closeContactBox()">
-  <div id="test" (panleft)="onPanLeft()" (panright)="onPanRight()"></div>
 <!--Carousel slides section-->
 <section class="slides">
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
@@ -9,15 +8,15 @@
       <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
-      <div class="carousel-item active">
+      <div class="carousel-item active" (panleft)="onPanLeft()" (panright)="onPanRight()">
         <img class="d-block" src="../../assets/images/home1.jpeg"
          alt="First slide">
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" (panleft)="onPanLeft()" (panright)="onPanRight()">
         <img class="d-block" src="../../assets/images/home2.jpeg"
          alt="Second slide">
       </div>
-      <div class="carousel-item">
+      <div class="carousel-item" (panleft)="onPanLeft()" (panright)="onPanRight()">
         <img class="d-block" src="../../assets/images/home3.jpeg"
          alt="Third slide">
       </div>
@@ -72,24 +71,24 @@
       <div class="testimonial-container">
         <div id="testimonials" class="carousel slide carousel-fade" data-ride="carousel">
           <div class="carousel-inner">
-            <div class="carousel-item active">
+            <div class="carousel-item active" (panleft)="testimonialPanLeft()" (panright)="testimonialPanRight()">
               <h3>Abbey Lopez</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis molestias similique aspernatur reprehenderit perspiciatis quasi nisi laboriosam eius fugit in!</p>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" (panleft)="testimonialPanLeft()" (panright)="testimonialPanRight()">
               <h3>John Doe</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis molestias similique aspernatur reprehenderit perspiciatis quasi nisi laboriosam eius fugit in!</p>
             </div>
-            <div class="carousel-item">
+            <div class="carousel-item" (panleft)="testimonialPanLeft()" (panright)="testimonialPanRight()">
               <h3>Jennifer Gonzales</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis molestias similique aspernatur reprehenderit perspiciatis quasi nisi laboriosam eius fugit in!</p>
             </div>
           </div>
-          <a class="carousel-control-prev" href="#testimonials" role="button" data-slide="prev">
+          <a class="carousel-control-prev" id="test-prev" href="#testimonials" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control-next" href="#testimonials" role="button" data-slide="next">
+          <a class="carousel-control-next" id="test-next" href="#testimonials" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>

@@ -21,4 +21,12 @@ export class HomeComponent implements OnInit {
   onPanRight() {
     document.getElementById('carousel-control-next').click();
   }
+
+  testimonialPanLeft() {
+    document.getElementById('test-prev').click();
+  }
+
+  testimonialPanRight() {
+    document.getElementById('test-next').click();
+  }
 }
