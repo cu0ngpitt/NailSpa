@@ -37,6 +37,10 @@ a:hover {
   margin-bottom: 3px;
 }
 
+.text-muted {
+  font-size: 12px;
+}
+
 @media only screen and (max-width: 812px) {
     /* For mobile phones: */
     .navbar-brand, .nav {
