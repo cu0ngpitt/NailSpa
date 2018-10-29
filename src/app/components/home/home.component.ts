@@ -15,18 +15,18 @@ export class HomeComponent implements OnInit {
   }
 
   onPanLeft() {
-    document.getElementById('carousel-control-prev').click();
-  }
-
-  onPanRight() {
     document.getElementById('carousel-control-next').click();
   }
 
+  onPanRight() {
+    document.getElementById('carousel-control-prev').click();
+  }
+
   testimonialPanLeft() {
-    document.getElementById('test-prev').click();
+    document.getElementById('test-next').click();
   }
 
   testimonialPanRight() {
-    document.getElementById('test-next').click();
+    document.getElementById('test-prev').click();
   }
 }
