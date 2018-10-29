@@ -12,6 +12,10 @@
   height: 30px;
 }
 
+.home.navbar-brand {
+  margin-top: 16px;
+}
+
 .navbar-brand {
   font-family: 'Euphoria Script', cursive;
   font-size: 1.5rem;
