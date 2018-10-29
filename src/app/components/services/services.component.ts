@@ -22,11 +22,6 @@ export class ServicesComponent implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
     handleScroll() {
-      const windowScroll = window.pageYOffset;
-      if(windowScroll > 0) {
-        this.show = true;
-      } else {
-        this.show = false;
-      }
+      this.show = window.pageYOffset > 0;
     }
 }
