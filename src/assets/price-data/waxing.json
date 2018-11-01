@@ -1,0 +1,45 @@
+{
+  "wax": [
+    {
+      "name": "Eyebrows",
+      "price": "$8"
+    },
+    {
+      "name": "Lip",
+      "price": "$6"
+    },
+    {
+      "name": "Chin",
+      "price": "$8"
+    },
+    {
+      "name": "Face",
+      "desc": "Forehead, eyebrows, cheeks, sideburns, lip, and chin.",
+      "price": "$30"
+    },
+    {
+      "name": "Underarms",
+      "price": "Starting at $15"
+    },
+    {
+      "name": "Half Arms",
+      "price": "Starting at $20"
+    },
+    {
+      "name": "Full Arms",
+      "price": "Starting at $35"
+    },
+    {
+      "name": "Half Legs",
+      "price": "Starting at $35"
+    },
+    {
+      "name": "Full Legs",
+      "price": "Starting at $50"
+    },
+    {
+      "name": "Back",
+      "price": "$35"
+    }
+  ]
+}

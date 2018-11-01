@@ -1,0 +1,39 @@
+{
+  "pedi": [
+    {
+      "name": "Basic Pedicure",
+      "desc": "Treatment consists of a foot soak, nail clipping and shaping, cuticle work, pumice stone/file scrub, moisturizer, calf and foot massage, and polish.",
+      "price": "$20"
+    },
+    {
+      "name": "Spa Pedicure",
+      "desc": "A Basic Pedicure with the addition of a sugar scrub and warm towel wrap.",
+      "price": "$25"
+    },
+    {
+      "name": "Peppermint Spa Pedicure",
+      "desc": "A Spa Pedicure with a peppermint cream mask.",
+      "price": "$28"
+    },
+    {
+      "name": "Paraffin Spa Pedicure",
+      "desc": "A Spa Pedicure which also includes a paraffin wax treatment.",
+      "price": "$28"
+    },
+    {
+      "name": "Deluxe Spa Pedicure",
+      "desc": "A Paraffin Spa Pedicure which also includes a cream mask.",
+      "price": "$30"
+    },
+    {
+      "name": "Hot Stone Pedicure",
+      "desc": "A Spa Pedicure which also includes a hot stone massage.",
+      "price": "$28"
+    },
+    {
+      "name": "Deluxe Hot Stone Pedicure",
+      "desc": "In addition to a Hot Stone Pedicure, you will also receive a pariffin wax, cream mask, moisturizer, and a sugar scrub. These four additions will be a scent of your choice.",
+      "price": "$40"
+    }
+  ]
+}

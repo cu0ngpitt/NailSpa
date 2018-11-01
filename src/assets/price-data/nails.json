@@ -1,0 +1,88 @@
+{
+  "acrylic": [
+    {
+      "name": "Acrylic Nails",
+      "fill": "$17",
+      "set": "$25"
+    },
+    {
+      "name": "White or American Tip",
+      "fill": "$17",
+      "set": "$27"
+    },
+    {
+      "name": "Solar Pink & White",
+      "fill": "$30",
+      "set": "$35"
+    },
+    {
+      "name": "Solar Pink & Color",
+      "fill": "$35",
+      "set": "$40"
+    },{
+      "name": "Whole Nail Color Powder",
+      "fill": "$25",
+      "set": "$40"
+    }
+  ],
+  "dip": [
+    {
+      "name": "Color Set",
+      "price": "$35"
+    },
+    {
+      "name": "French or American Set",
+      "price": "$40"
+    },
+    {
+      "name": "Ombre",
+      "price": "$45"
+    }
+  ],
+  "regPolish": [
+    {
+      "name": "Polish Change",
+      "hands": "$7",
+      "feet": "$8"
+    },
+    {
+      "name": "French Polish",
+      "hands": "$9",
+      "feet": "$10"
+    }
+  ],
+  "gelPolish": [
+    {
+      "name": "Gel Manicure",
+      "desc": "Basic Spa Manicure with Gel polish",
+      "whole": "$25",
+      "tip": "$30"
+    },
+    {
+      "name": "Gel Pedicure",
+      "desc": "Basic Spa Pedicure with Gel polish",
+      "whole": "$35",
+      "tip": "$40"
+    },
+    {
+      "name": "Gel Manicure",
+      "desc": "",
+      "whole": "$15",
+      "tip": "$20"
+    }
+  ],
+  "other": [
+    {
+      "name": "Nail Removal",
+      "price": "$10"
+    },
+    {
+      "name": "Nail Repair",
+      "price": "$3"
+    },
+    {
+      "name": "Nail Designs",
+      "price": "Starting at $3"
+    }
+  ]
+}

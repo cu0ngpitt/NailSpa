@@ -1,0 +1,19 @@
+{
+  "kids": [
+    {
+      "name": "Basic Spa Manicure",
+      "price": "$10"
+    },
+    {
+      "name": "Basic Spa Pedicure",
+      "price": "$20"
+    }
+  ],
+  "kidPolish": [
+    {
+      "name": "Nail Polish",
+      "hand": "$4",
+      "feet": "$6"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "mani": [
+    {
+      "name": "Basic Spa Manicure",
+      "desc": "Treatment consists of a hand soak, nail clipping and shaping, cuticle work, moisturizer, hand and forearm massage, a warm towel wrap, and polish.",
+      "price": "$15"
+    },
+    {
+      "name": "Deluxe Spa Manicure",
+      "desc": "A Basic Spa Manicure treatment which also includes a sugar scrub and paraffin wax treatment.",
+      "price": "$20"
+    }
+  ]
+}
