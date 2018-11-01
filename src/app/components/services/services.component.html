@@ -47,30 +47,10 @@
               <p class="heading">Fill</p>
               <p class="heading">Set</p>
             </div>
-            <div class="pricing-item">
-              <p class="item-name">Acrylic Nails</p>
-              <p class="price">$17</p>
-              <p class="price">$25</p>
-            </div>
-            <div class="pricing-item">
-              <p class="item-name">White or American Tip</p>
-              <p class="price">$17</p>
-              <p class="price">$27</p>
-            </div>
-            <div class="pricing-item">
-              <p class="item-name">Solar Pink & White</p>
-              <p class="price">$30</p>
-              <p class="price">$35</p>
-            </div>
-            <div class="pricing-item">
-              <p class="item-name">Solar Pink & Color</p>
-              <p class="price">$35</p>
-              <p class="price">$40</p>
-            </div>
-            <div class="pricing-item">
-              <p class="item-name">Whole Nail Color Powder</p>
-              <p class="price">$25</p>
-              <p class="price">$40</p>
+            <div class="pricing-item" *ngFor="let nail of nails">
+              <p class="item-name">{{nail.name}}</p>
+              <p class="price">{{nail.fill}}</p>
+              <p class="price">{{nail.set}}</p>
             </div>
           </div>
 
@@ -81,17 +61,9 @@
                 is then dipped into colored acrylic powder and the process is repeated until the desired thickness is achieved.
               </p>
             </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Color Set</p>
-              <p class="price">$35</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">French or American Set</p>
-              <p class="price">$40</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Ombre</p>
-              <p class="price">$45</p>
+            <div class="pricing-item-single" *ngFor="let dip of dips">
+              <p class="item-name">{{dip.name}}</p>
+              <p class="price">{{dip.price}}</p>
             </div>
           </div>
         </div>
@@ -110,15 +82,10 @@
               <p class="heading">Hands</p>
               <p class="heading">Feet</p>
             </div>
-            <div class="pricing-item">
-              <p class="item-name">Polish Change</p>
-              <p class="price">$7</p>
-              <p class="price">$8</p>
-            </div>
-            <div class="pricing-item">
-              <p class="item-name">French Polish</p>
-              <p class="price">$9</p>
-              <p class="price">$10</p>
+            <div class="pricing-item" *ngFor="let polish of regPolish">
+              <p class="item-name">{{polish.name}}</p>
+              <p class="price">{{polish.hands}}</p>
+              <p class="price">{{polish.feet}}</p>
             </div>
           </div>
 
@@ -134,26 +101,13 @@
               <p class="heading">Whole Nail</p>
               <p class="heading">Tip Only</p>
             </div>
-            <div class="pricing-item">
+            <div class="pricing-item" *ngFor="let polish of gelPolish">
               <div class="item-name">
-                <p>Gel Manicure</p>
-                <p class="desc">Basic Spa Manicure with Gel polish</p>
+                <p>{{polish.name}}</p>
+                <p class="desc">{{polish.desc}}</p>
               </div>
-              <p class="price">$25</p>
-              <p class="price">$30</p>
-            </div>
-            <div class="pricing-item">
-              <div class="item-name">
-                <p>Gel Pedicure</p>
-                <p class="desc">Basic Spa Pedicure with Gel polish</p>
-              </div>
-              <p class="price">$35</p>
-              <p class="price">$40</p>
-            </div>
-            <div class="pricing-item">
-              <p class="item-name">Gel Polish Only</p>
-              <p class="price">$15</p>
-              <p class="price">$20</p>
+              <p class="price">{{polish.whole}}</p>
+              <p class="price">{{polish.tip}}</p>
             </div>
           </div>
         </div>
@@ -163,17 +117,9 @@
         </div>
         <div class="pricing-content row justify-content-center">
           <div class="pricing-subsction col-lg-10 align-self-center">
-            <div class="pricing-item-single">
-              <p class="item-name">Nail Removal</p>
-              <p class="price">$10</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Nail Repair</p>
-              <p class="price">$3</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Nail Designs</p>
-              <p class="price">Starting at $3</p>
+            <div class="pricing-item-single" *ngFor="let other of others">
+              <p class="item-name">{{other.name}}</p>
+              <p class="price">{{other.price}}</p>
             </div>
           </div>
         </div>
@@ -194,58 +140,12 @@
       <div class="container">
         <div class="pricing-content row justify-content-center">
           <div class="pricing-subsction col-lg-10">
-            <div class="pricing-item-single">
+            <div class="pricing-item-single" *ngFor="let pedi of pedicure">
               <div class="item-name">
-                <p>Basic Pedicure</p>
-                <p class="desc">Treatment consists of a foot soak, nail clipping and shaping, cuticle work, pumice stone/file scrub,
-                  moisturizer, calf and foot massage, and polish.
-                </p>
+                <p>{{pedi.name}}</p>
+                <p class="desc">{{pedi.desc}}</p>
               </div>
-              <p class="price">$20</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Spa Pedicure</p>
-                <p class="desc">A Basic Pedicure with the addition of a sugar scrub and warm towel wrap.
-                </p>
-              </div>
-              <p class="price">$25</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Peppermint Spa Pedicure</p>
-                <p class="desc">A Spa Pedicure with a peppermint cream mask.</p>
-              </div>
-              <p class="price">$28</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Paraffin Spa Pedicure</p>
-                <p class="desc">A Spa Pedicure which also includes a paraffin wax treatment.</p>
-              </div>
-              <p class="price">$28</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Deluxe Spa Pedicure</p>
-                <p class="desc">A Paraffin Spa Pedicure which also includes a cream mask.</p>
-              </div>
-              <p class="price">$30</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Hot Stone Pedicure</p>
-                <p class="desc">A Spa Pedicure which also includes a hot stone massage.</p>
-              </div>
-              <p class="price">$28</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Deluxe Hot Stone Pedicure</p>
-                <p class="desc">In addition to a Hot Stone Pedicure, you will also receive a pariffin wax, cream mask, moisturizer,
-                  and a sugar scrub. These four additions will be a scent of your choice.</p>
-              </div>
-              <p class="price">$40</p>
+              <p class="price">{{pedi.price}}</p>
             </div>
             <div class="scents">
               <div class="item-name">
@@ -283,21 +183,12 @@
       <div class="container">
         <div class="pricing-content row justify-content-center">
           <div class="pricing-subsction col-lg-10">
-            <div class="pricing-item-single">
+            <div class="pricing-item-single" *ngFor="let mani of manicure">
               <div class="item-name">
-                <p>Basic Spa Manicure</p>
-                <p class="desc">Treatment consists of a hand soak, nail clipping and shaping, cuticle work, moisturizer,
-                   hand and forearm massage, a warm towel wrap, and polish.
-                </p>
+                <p>{{mani.name}}</p>
+                <p class="desc">{{mani.desc}}</p>
               </div>
-              <p class="price">$15</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Deluxe Spa Manicure</p>
-                <p class="desc">A Basic Spa Manicure treatment which also includes a sugar scrub and paraffin wax treatment.</p>
-              </div>
-              <p class="price">$20</p>
+              <p class="price">{{mani.price}}</p>
             </div>
           </div>
         </div>
@@ -319,48 +210,12 @@
       <div class="container">
         <div class="pricing-content row justify-content-center">
           <div class="pricing-subsction col-lg-10">
-            <div class="pricing-item-single">
-              <p class="item-name">Eyebrows</p>
-              <p class="price">$8</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Lip</p>
-              <p class="price">$6</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Chin</p>
-              <p class="price">$8</p>
-            </div>
-            <div class="pricing-item-single">
+            <div class="pricing-item-single" *ngFor="let wax of waxing">
               <div class="item-name">
-                <p>Face</p>
-                <p class="desc">Forehead, eyebrows, cheeks, sideburns, lip, and chin.</p>
+                <p>{{wax.name}}</p>
+                <p class="desc">{{wax.desc}}</p>
               </div>
-              <p class="price">$30</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Underarms</p>
-              <p class="price">Starting at $15</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Half Arms</p>
-              <p class="price">Starting at $20</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Full Arms</p>
-              <p class="price">Starting at $35</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Half Legs</p>
-              <p class="price">Starting at $35</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Full Legs</p>
-              <p class="price">Starting at $50</p>
-            </div>
-            <div class="pricing-item-single">
-              <p class="item-name">Back</p>
-              <p class="price">$35</p>
+              <p class="price">{{wax.price}}</p>
             </div>
           </div>
         </div>
@@ -383,27 +238,19 @@
 
         <div class="pricing-content row justify-content-center">
           <div class="pricing-subsction col-lg-10">
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Basic Spa Manicure</p>
-              </div>
-              <p class="price">$10</p>
-            </div>
-            <div class="pricing-item-single">
-              <div class="item-name">
-                <p>Basic Spa Pedicure</p>
-              </div>
-              <p class="price">$20</p>
+            <div class="pricing-item-single" *ngFor="let kid of kids">
+              <p class="item-name">{{kid.name}}</p>
+              <p class="price">{{kid.price}}</p>
             </div>
             <div class="header">
               <p></p>
               <p class="heading">Hands</p>
               <p class="heading">Feet</p>
             </div>
-            <div class="pricing-item">
-              <p class="item-name">Nail Polish</p>
-              <p class="price">$4</p>
-              <p class="price">$6</p>
+            <div class="pricing-item" *ngFor="let kid of kidPolish">
+              <p class="item-name">{{kid.name}}</p>
+              <p class="price">{{kid.hand}}</p>
+              <p class="price">{{kid.feet}}</p>
             </div>
           </div>
         </div>
